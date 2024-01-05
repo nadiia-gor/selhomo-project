@@ -43,8 +43,8 @@ Task 1 */
 function maxtask1() {
 const amountDeposit = parseFloat(prompt('Enter the amount of the deposit in the bank for 2 months'));
 const sumPercent = (amountDeposit * (0.05 * 1/6)).toFixed(2); 
-// 1/6 = 2/12 місяців
-alert(`The amount of accrued interest is ${sumPercent}%`);
+// 1/6 = 2/12 місяців.
+alert(`The amount of accrued interest is ${sumPercent} €`);
 }
 
 /* Task 2
