@@ -283,3 +283,58 @@ for(let i = 2; i < 10; i++) {
 }
 document.getElementById('multy-table').innerHTML = multy;
 
+// Task 3
+function leapYear(y) {
+    return y % 4 === 0 && y % 100 !== 0 || y % 400 === 0;
+}
+
+const addZero = n => n<10?'0'+n:''+n;
+
+function nextDay(dayIn, monthIn, yearIn) {
+let dayOut = dayIn + 1, monthOut = monthIn, yearOut = yearIn;
+
+
+switch(monthIn) {
+    case 1:
+    case 3:
+    case 5:
+    case 7:
+    case 8:
+    case 10:
+    case 12:
+        if(dayIn === 31) {
+            dayOut = 1;
+            monthOut = monthIn + 1;
+        }
+        break;
+    case 4:
+    case 6:
+    case 9:
+    case 11:
+        if(dayIn === 30) {
+            dayOut = 1;
+            monthOut = monthIn + 1;
+        }
+        break;
+    case 2:
+        if(leapYear(yearIn)) {
+            if(dayIn === 29) {
+                dayOut = 1;
+                monthOut = monthIn + 1;
+            }
+        } else {
+            if(dayIn === 28) {
+                dayOut = 1;
+                monthOut = monthIn + 1;
+            }
+        }
+        break;
+}
+
+if(monthOut === 13) {
+    monthOut = 1;
+    yearOut = yearIn + 1;
+}
+
+return `${addZero(dayOut)}/${addZero(monthOut)}/${yearOut}`;
+}
