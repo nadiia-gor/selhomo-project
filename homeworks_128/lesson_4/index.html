@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Functions</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+</head>
+
+<body>
+    <div class="container mt-4">
+        <h2 class="text-center mb-2">Мінімум</h2>
+        <div class="card mb-4">
+            <h5 class="card-header">
+                Task 2
+            </h5>
+            <div class="card-body">
+                перевірити завдання можна у консолі, викликавши функцію arg.
+            </div>
+        </div>
+        <div class="card mb-4">
+            <h5 class="card-header">
+                Task 3
+            </h5>
+            <div class="card-body">
+                <div class="input-group flex-nowrap">
+                    <input type="text" class="form-control" placeholder="Enter first number" id="first-number-min3" />
+                    <input type="text" class="form-control" placeholder="Enter second number" id="second-number-min3">
+                </div>
+                <div class="mt-1" id="answer-min3"></div>
+            </div>
+            <div class="card-footer">
+                <button type="button" class="btn btn-info" onclick="mintask3()">Run</button>
+            </div>
+        </div>
+        <div class="card mb-4">
+            <h5 class="card-header">
+                Task 4
+            </h5>
+            <div class="card-body">
+                <div class="input-group flex-nowrap">
+                    <input type="text" class="form-control" placeholder="Enter a number" id="number-min4" />
+                </div>
+                <div class="mt-1" id="answer-min4"></div>
+            </div>
+            <div class="card-footer">
+                <button type="button" class="btn btn-info" onclick="mintask4()">Run</button>
+            </div>
+        </div>
+        <div class="card mb-4">
+            <h5 class="card-header">
+                Task 5
+            </h5>
+            <div class="card-body">
+                <div class="input-group flex-nowrap">
+                    <input type="text" class="form-control" placeholder="Enter a number" id="number1-min5" />
+                    <input type="text" class="form-control" placeholder="Enter a number" id="number2-min5" />
+                    <input type="text" class="form-control" placeholder="Enter a number" id="number3-min5" />
+                </div>
+                <div class="mt-1" id="answer-min5"></div>
+            </div>
+            <div class="card-footer">
+                <button type="button" class="btn btn-info" onclick="mintask5()">Run</button>
+            </div>
+        </div>
+        <div class="card mb-4">
+            <h5 class="card-header">
+                Task 6
+            </h5>
+            <div class="card-body">
+                <div class="input-group flex-nowrap">
+                    <input type="text" class="form-control" placeholder="Enter a number" id="number1-min6" required />
+                    <input type="text" class="form-control" placeholder="Enter a number" id="number2-min6" />
+                </div>
+                <div class="mt-1" id="answer-min6"></div>
+            </div>
+            <div class="card-footer">
+                <button type="button" class="btn btn-info" onclick="mintask6()">Run</button>
+            </div>
+        </div>
+        <h2 class="text-center mb-2">Норма</h2>
+        <div class="card mb-4">
+            <h5 class="card-header">
+                Task 1
+            </h5>
+            <div class="card-body">
+                <div class="input-group flex-nowrap">
+                    <input type="text" class="form-control" placeholder="Enter a number. The number must be natural."
+                        id="number-normal1" />
+                </div>
+                <div class="mt-1" id="answer-normal1"></div>
+            </div>
+            <div class="card-footer">
+                <button type="button" class="btn btn-info" onclick="normaltask1()">Run</button>
+            </div>
+        </div>
+        <div class="card mb-4">
+            <h5 class="card-header">
+                Task 2
+            </h5>
+            <div class="card-body">
+                <div class="input-group flex-nowrap">
+                    <input type="text" class="form-control" placeholder="Enter a number" id="number1-normal2" />
+                    <input type="text" class="form-control" placeholder="Enter a number" id="number2-normal2" />
+                </div>
+                <div class="mt-1" id="answer-normal2"></div>
+            </div>
+            <div class="card-footer">
+                <button type="button" class="btn btn-info" onclick="normaltask2()">Run</button>
+            </div>
+        </div>
+    </div>
+    <script src="assets/script.js"></script>
+</body>
+
+</html>
