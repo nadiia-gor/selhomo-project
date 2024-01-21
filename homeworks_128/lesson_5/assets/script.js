@@ -147,3 +147,134 @@ function normaltask2(unit) {
 
   document.getElementById('all-time').innerHTML = obj_time.showTime();
 }
+
+/* Максимум
+Task 1 */
+
+const actions = {
+  mul(f1, f2) {
+    const result = {
+      numerator: f1.numerator * f2.numerator,
+      denominator: f1.denominator * f2.denominator,
+    };
+    return this.simplify(result);
+  },
+  div(f1, f2) {
+    const result = {
+      numerator: f1.numerator * f2.denominator,
+      denominator: f1.denominator * f2.numerator,
+    };
+    return this.simplify(result);
+  },
+  gcd(num1, num2) {
+    while (num2 !== 0) {
+      const temp = num2;
+      num2 = num1 % num2;
+      num1 = temp;
+    }
+    return Math.abs(num1);
+  },
+  lcm(num1, num2) {
+    return (num1 * num2) / this.gcd(num1, num2);
+  },
+  toMixedNumber(fraction) {
+    const wholePart = Math.floor(fraction.numerator / fraction.denominator);
+    const newNumerator = fraction.numerator % fraction.denominator;
+    return {
+      wholePart: wholePart,
+      numerator: newNumerator,
+      denominator: fraction.denominator,
+    };
+  },
+  simplify(fraction) {
+    const sign =
+      Math.sign(fraction.numerator) * Math.sign(fraction.denominator);
+    const absNumerator = Math.abs(fraction.numerator);
+    const absDenominator = Math.abs(fraction.denominator);
+    const gcd = this.gcd(absNumerator, absDenominator);
+    return {
+      numerator: (sign * absNumerator) / gcd,
+      denominator: (sign * absDenominator) / gcd,
+    };
+  },
+  add(f1, f2) {
+    const denomLcm = this.lcm(f1.denominator, f2.denominator);
+    const f1Mul = denomLcm / f1.denominator;
+    const f2Mul = denomLcm / f2.denominator;
+    const subfraction = {
+      numerator: f1.numerator * f1Mul + f2.numerator * f2Mul,
+      denominator: denomLcm,
+    };
+    return this.simplify(subfraction);
+  },
+  sub(f1, f2) {
+    const denomLcm = this.lcm(f1.denominator, f2.denominator);
+    const f1Mul = denomLcm / f1.denominator;
+    const f2Mul = denomLcm / f2.denominator;
+    const subfraction = {
+      numerator: f1.numerator * f1Mul - f2.numerator * f2Mul,
+      denominator: denomLcm,
+    };
+    return this.simplify(subfraction);
+  },
+};
+
+function maxtask(opName) {
+  const numerator1 = document.getElementById('numerator_input1').valueAsNumber;
+  const denominator1 =
+    document.getElementById('denominator_input1').valueAsNumber;
+  const numerator2 = document.getElementById('numerator_input2').valueAsNumber;
+  const denominator2 =
+    document.getElementById('denominator_input2').valueAsNumber;
+  let answer = '';
+  let result;
+  if (
+    !isNaN(numerator1) &&
+    !isNaN(denominator1) &&
+    !isNaN(numerator2) &&
+    !isNaN(denominator2) &&
+    denominator1 !== 0 &&
+    denominator2 !== 0
+  ) {
+    const fraction1 = {
+      numerator: numerator1,
+      denominator: denominator1,
+    };
+    const fraction2 = {
+      numerator: numerator2,
+      denominator: denominator2,
+    };
+    switch (opName) {
+      case 'add':
+        result = actions.add(fraction1, fraction2);
+        break;
+      case 'sub':
+        result = actions.sub(fraction1, fraction2);
+        break;
+      case 'mul':
+        result = actions.mul(fraction1, fraction2);
+        break;
+      case 'div':
+        result = actions.div(fraction1, fraction2);
+        break;
+    }
+
+    if (result) {
+      const mixedNumber = actions.toMixedNumber(result);
+      if (mixedNumber.wholePart === 1 && mixedNumber.numerator === 0) {
+        answer = 'Answer: 1';
+      } else {
+        answer = `Answer: ${
+          mixedNumber.wholePart > 0 ? `${mixedNumber.wholePart} ` : ''
+        }${
+          mixedNumber.numerator > 0
+            ? `${mixedNumber.numerator}/${mixedNumber.denominator}`
+            : '0'
+        }`;
+      }
+    } else {
+      answer = 'Invalid input!';
+    }
+  }
+  document.getElementById('answer-max').innerHTML = `<span>${answer}</span>`;
+}

@@ -72,6 +72,36 @@
                 <div class="mt-1" id="time-plus"></div>
             </div>
         </div>
+        <h2 class="text-center mb-2">Максимум</h2>
+        <div class="card mb-4">
+            <h5 class="card-header">
+                Task 1
+            </h5>
+            <div class="card-body">
+                <div class="d-flex flex-column " style="width: 50%">
+                    <input type="number" class="form-control" placeholder="Enter the numerator of first fraction"
+                        id="numerator_input1" />
+                    <br>
+                    <input type="number" class="form-control" placeholder="Enter the denominator of first fraction"
+                        id="denominator_input1" />
+                    <br>
+                    <input type="number" class="form-control" placeholder="Enter the numerator of second fraction"
+                        id="numerator_input2" />
+                    <br>
+                    <input type="number" class="form-control" placeholder="Enter the denominator of second fraction"
+                        id="denominator_input2" />
+                    <br>
+
+                </div>
+                <button type="button" class="btn btn-info" onclick="maxtask('add')">Add</button>
+                <button type="button" class="btn btn-info" onclick="maxtask('sub')">Subtract</button>
+                <button type="button" class="btn btn-info" onclick="maxtask('mul')">Multiply</button>
+                <button type="button" class="btn btn-info" onclick="maxtask('div')">Divide</button>
+                <div class="mt-1" id="answer-max"></div>
+            </div>
+
+        </div>
+
     </div>
     <script src="assets/script.js"></script>
 </body>
