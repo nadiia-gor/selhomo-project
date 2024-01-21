@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Objects</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+</head>
+
+<body>
+    <div class="container mt-4">
+        <h2 class="text-center mb-2">Мінімум</h2>
+        <div class="card mb-3">
+            <img src="assets/images/toyota.png" class="card-img-top" alt="toyota-land-cruiser">
+            <div class="card-body">
+                <h5 class="card-title">Task 1</h5>
+                <p class="card-text">Створи об'єкт, що описує автомобіль (виробник, модель, рік випуску, середня
+                    швидкість, обсяг паливного баку, середня витрата палива на 100 км., водії), і наступні методи для
+                    роботи з цим об'єктом:
+                    Метод, який виводить на екран інформацію про автомобіль.
+                    Додавання ім’я водія у список
+                    Перевірка водія на наявність його ім’я у списку
+                    Підрахунок необхідного часу та кількості палива для подолання переданої відстані з середньою
+                    швидкістю. Враховуй, що через кожні 4 години дороги водієві необхідно робити перерву на 1 годину.
+                </p>
+                <div id="info-list">
+
+                </div>
+                <input type="text" class="form-control" placeholder="Enter the distance" id="distance" />
+                <a href="#" class="btn btn-primary mt-2" onclick="mintask()">Calculate</a>
+                <div id="answer-min"></div>
+            </div>
+        </div>
+        <h2 class="text-center mb-2">Норма</h2>
+        <div class="card mb-4">
+            <h5 class="card-header">
+                Task 1
+            </h5>
+            <div class="card-body">
+                <div class="d-flex flex-column " style="width: 50%">
+                    <input type="number" class="form-control" placeholder="Enter the number of hours" id="hours_input"
+                        min="0" max="23" />
+                    <br>
+                    <input type="number" class="form-control" placeholder="Enter the number of minutes"
+                        id="minutes_input" min="0" max="59" />
+                    <br>
+                    <input type="number" class="form-control" placeholder="Enter the number of seconds"
+                        id="seconds_input" min="0" max="59" />
+                    <br>
+                </div>
+                <button type="button" class="btn btn-info" onclick="normaltask()">Show time</button>
+                <div class="mt-1 mb-4" id="all-time">
+                </div>
+                <div class="d-flex flex-column align-items-start" style="width: 50%;">
+                    <input type="number" class="form-control" min="0" placeholder="Enter any amount of seconds"
+                        id="amount_sec" />
+                    <br>
+                    <button type="button" class="btn btn-info" onclick="normaltask2('sec')">Show time</button>
+                    <br>
+                    <input type="number" class="form-control" min="0" placeholder="Enter any amount of minutes"
+                        id="amount_min" />
+                    <br>
+                    <button type="button" class="btn btn-info" onclick="normaltask2('min')">Show time</button>
+                    <br>
+                    <input type="number" class="form-control" min="0" placeholder="Enter any amount of hours"
+                        id="amount_hours" />
+                    <br>
+                    <button type="button" class="btn btn-info" onclick="normaltask2('hours')">Show time</button>
+                </div>
+                <div class="mt-1" id="time-plus"></div>
+            </div>
+        </div>
+        <h2 class="text-center mb-2">Максимум</h2>
+        <div class="card mb-4">
+            <h5 class="card-header">
+                Task 1
+            </h5>
+            <div class="card-body">
+                <div class="d-flex flex-column " style="width: 50%">
+                    <input type="number" class="form-control" placeholder="Enter the numerator of first fraction"
+                        id="numerator_input1" />
+                    <br>
+                    <input type="number" class="form-control" placeholder="Enter the denominator of first fraction"
+                        id="denominator_input1" />
+                    <br>
+                    <input type="number" class="form-control" placeholder="Enter the numerator of second fraction"
+                        id="numerator_input2" />
+                    <br>
+                    <input type="number" class="form-control" placeholder="Enter the denominator of second fraction"
+                        id="denominator_input2" />
+                    <br>
+
+                </div>
+                <button type="button" class="btn btn-info" onclick="maxtask('add')">Add</button>
+                <button type="button" class="btn btn-info" onclick="maxtask('sub')">Subtract</button>
+                <button type="button" class="btn btn-info" onclick="maxtask('mul')">Multiply</button>
+                <button type="button" class="btn btn-info" onclick="maxtask('div')">Divide</button>
+                <div class="mt-1" id="answer-max"></div>
+            </div>
+
+        </div>
+
+    </div>
+    <script src="assets/script.js"></script>
+</body>
+
+</html>
