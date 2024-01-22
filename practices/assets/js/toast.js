@@ -7,6 +7,7 @@ const toast = {
     'border-radius': '10px',
     padding: '15px',
     color: '#FFF',
+    'z-index': '1',
   },
   success: function (text) {
     this.show(text, 'success');
