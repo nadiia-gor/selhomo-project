@@ -58,16 +58,52 @@
                 </div>
             </div>
         </div>
+
+        <div class="card mb-4">
+            <div class="card-header">
+                <h3>Discount</h3>
+            </div>
+            <div class="card-body">
+                <div class="row">
+                    <div class="col-6">
+                        <label for="disc_type">Type</label>
+                        <select id="disc_type" class="form-control">
+                            <option value="percent">Percent</option>
+                            <option value="fixed">Fixed</option>
+                        </select>
+                    </div>
+                    <div class="col-2">
+                        <label for="disc_amount">Amount</label>
+                        <input type="number" value="0" id="disc_amount" class="form-control">
+                    </div>
+                   
+                    <div class="col-2">
+                        <button type="button" class="btn btn-success mt-4" onclick="applyDisc()">Apply</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
         <div class="card">
             <div class="card-header">
                 <h3>Products in cart</h3>
             </div>
             <div class="card-body">
+                <select id="sorting" class="form-control" onchange="productList()">
+                    <option value="subTotalAsc">Subtotal asc</option>
+                    <option value="subTotalDesc">Subtotal desc</option>
+                    <option value="qtyAsc">Quantity asc</option>
+                    <option value="qtyDesc">Quantity desc</option>
+                    <option value="title">Title</option>
+
+                </select>
                 <table class="table">
                     <thead>
                         <tr>
                             <th>#</th>
                             <th>Title</th>
+                            <th>Bought</th>
                             <th>Quantity</th>
                             <th>Price per 1 product</th>
                             <th>Subtotal</th>
@@ -76,6 +112,11 @@
                     </thead>
                     <tbody id="cart_tbody"></tbody>
                     <tfoot>
+                        <tr>
+                            <th colspan="4">Discount:</th>
+                            <th id="cart_disc"></th>
+                            <th></th>
+                        </tr>
                         <tr>
                             <th colspan="4">Total</th>
                             <th id="cart_total"></th>
