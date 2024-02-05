@@ -1,0 +1,121 @@
+@import '_general.scss';
+@import '_classes.scss';
+
+header {
+  height: 80px;
+  background-color: #f8f1ea;
+  .header-container {
+    display: flex;
+    justify-content: space-between;
+    padding-left: 100px;
+    padding-right: 100px;
+    .header-logo {
+      padding-top: 23px;
+      padding-bottom: 23px;
+      img {
+        width: 182px;
+        height: 34px;
+      }
+    }
+    .navigation-header {
+      display: flex;
+      gap: 290px;
+      nav > ul {
+        display: flex;
+
+        a {
+          text-decoration: none;
+          color: #000;
+        }
+
+        .bg-hw {
+          padding: 28px 15px;
+        }
+
+        .bg-hw:hover {
+          background-color: #f16a50;
+
+          a {
+            color: #fff;
+          }
+        }
+      }
+    }
+    .icons-panel-header {
+      display: flex;
+      padding-top: 23px;
+      gap: 30px;
+      .icon {
+        height: 36px;
+        width: 36px;
+      }
+    }
+  }
+}
+
+.main-sec {
+  .change-color-page {
+    background: #f8f1eab3;
+  }
+
+  .change-color-page:active {
+    background: #f16a50;
+  }
+
+  .change-color-page.is-active {
+    background: #f16a50;
+  }
+
+  .splide__pagination__page {
+    margin-right: 30px;
+    width: 15px;
+    height: 15px;
+    margin-bottom: 50px;
+  }
+
+  .splide__arrow {
+    display: none;
+  }
+
+  .main-slide1 {
+    background: linear-gradient(180deg, #000000d6 0%, #d9d9d900 100%),
+      url('/homeworks_128/lesson_8/assets/img/mainslide1.jpg');
+    @extend %banner-style;
+    background-size: cover;
+  }
+
+  .main-slide2 {
+    background: linear-gradient(180deg, #000000d6 0%, #d9d9d900 100%),
+      url('/homeworks_128/lesson_8/assets/img/mainslide2.jpg');
+    @extend %banner-style;
+    background-size: cover;
+    background-position: center;
+  }
+
+  .main-slide3 {
+    background: linear-gradient(180deg, #000000d6 0%, #d9d9d900 100%),
+      url('/homeworks_128/lesson_8/assets/img/mainslide3.jpg');
+    @extend %banner-style;
+    background-size: cover;
+    background-position: center;
+  }
+
+  .content-position {
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+    width: 29%;
+    position: relative;
+    top: 120px;
+    left: 67%;
+
+    .main-slide-btn {
+      display: flex;
+      justify-content: center;
+    }
+  }
+}
+
+// section {
+
+// }

@@ -1,0 +1,23 @@
+%banner-style {
+  height: 700px;
+
+  h1 {
+    text-transform: uppercase;
+    color: #f8f1ea;
+    font-size: 50px;
+  }
+
+  button {
+    padding: 15px 57px;
+    border: 2px solid var(--brown-light, #f8f1ea);
+    background-color: transparent;
+    color: #fff;
+    text-transform: uppercase;
+  }
+
+  button:hover {
+    background-color: #f16a50;
+    border: 2px solid var(--tomato-light, #f16a50);
+    transition: all 0.2s ease;
+  }
+}
