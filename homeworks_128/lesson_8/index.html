@@ -51,7 +51,7 @@
                         <div class="content-position">
                             <h1>discover new options</h1>
                             <div class="main-slide-btn">
-                                <button type="button">View more</button>
+                                <button type="button" class="main-view-more">View more</button>
                             </div>
                         </div>
                     </div>
@@ -61,7 +61,7 @@
                         <div class="content-position">
                             <h1>expand your horizons</h1>
                             <div class="main-slide-btn">
-                                <button type="button">View more</button>
+                                <button type="button" class="main-view-more">View more</button>
                             </div>
                         </div>
                     </div>
@@ -71,7 +71,7 @@
                         <div class="content-position">
                             <h1>Find your own style</h1>
                             <div class="main-slide-btn">
-                                <button type="button">View more</button>
+                                <button type="button" class="main-view-more">View more</button>
                             </div>
                         </div>
                     </div>
@@ -79,13 +79,24 @@
             </ul>
         </div>
     </section>
-    <section>
+    <section class="second-sec">
         <h2>New arrivals</h2>
         <div class="splide" id="slider2">
+
+            <div class="splide__arrows">
+                <button class="splide__arrow splide__arrow--prev">
+                    <img src="assets/img/arrows/left-arrow.svg" alt="left-arrow">
+                </button>
+                <button class="splide__arrow splide__arrow--next">
+                    <img src="assets/img/arrows/right-arrow.svg" alt="right-arrow">
+                </button>
+            </div>
+
             <div class="splide__track">
                 <div class="splide__list">
                     <div class="splide__slide">
                         <div class="product-container">
+                            <span class="in-stock">in stock</span>
                             <img src="assets/img/guitars/guitar1.jpg" alt="pink-guitar">
                             <h4>Hagstrom Alvar Limited Edition</h4>
                             <h5>€2.990,00</h5>
@@ -93,13 +104,15 @@
                     </div>
                     <div class="splide__slide">
                         <div class="product-container">
+                            <span class="in-stock">in stock</span>
                             <img src="assets/img/guitars/guitar2.jpg" alt="pink-guitar">
                             <h4>Hagstrom Tremar Viking Deluxe Cloudy Seas</h4>
                             <h5>€1.300,00</h5>
                         </div>
                     </div>
                     <div class="splide__slide">
-                        <div class="product-container">
+                        <div class="product-container sold-border">
+                            <span class="sold">sold</span>
                             <img src="assets/img/guitars/guitar3.jpg" alt="pink-guitar">
                             <h4>Gibson Les Paul Standard 60s</h4>
                             <h5>€3.749,00</h5>
@@ -107,6 +120,7 @@
                     </div>
                     <div class="splide__slide">
                         <div class="product-container">
+                            <span class="in-stock">in stock</span>
                             <img src="assets/img/guitars/guitar4.jpg" alt="pink-guitar">
                             <h4>Suhr Standard Plus Trans Blue Denim</h4>
                             <h5>€3.449,00</h5>
@@ -114,6 +128,7 @@
                     </div>
                     <div class="splide__slide">
                         <div class="product-container">
+                            <span class="in-stock">in stock</span>
                             <img src="assets/img/guitars/guitar5.jpg" alt="pink-guitar">
                             <h4>Fender Telecaster Black Paisley Limited Edition</h4>
                             <h5>€1.499,00</h5>
@@ -122,6 +137,12 @@
                 </div>
             </div>
         </div>
+        <div class="sec2-btn">
+            <button class="arrivals-btn" type="button">View more</button>
+        </div>
+    </section>
+    <section>
+        <h2>our partners</h2>
     </section>
 </body>
 

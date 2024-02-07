@@ -8,5 +8,8 @@ new Splide('#slider1', {
 
 new Splide('#slider2', {
   type: 'loop',
-  height: '700px',
+  gap: '20px',
+  perPage: 5,
+  perMove: 1,
+  trimSpace: 'move',
 }).mount();
