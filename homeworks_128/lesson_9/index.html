@@ -13,6 +13,12 @@
             grid-template-columns: repeat(4, 1fr);
             gap: 30px;
         }
+
+        #fav-movies-list {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            grid-gap: 10px;
+        }
     </style>
 
 </head>
@@ -29,6 +35,12 @@
                         <button type="button" class="btn btn-info" id="search-btn">Search</button>
                     </div>
                 </div>
+            </div>
+            <div class="card mb-4">
+                <div class="card-header">
+                    <h4>Fav movies</h4>
+                </div>
+                <div class="card-body" id="fav-movies-list"></div>
             </div>
             <div class="card">
                 <div class="card-header">
