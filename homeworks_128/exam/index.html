@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Monticello</title>
+    <link rel="stylesheet" href="assets/css/styles.css">
+    <script src="https://code.jquery.com/jquery-3.7.1.slim.min.js"
+        integrity="sha256-kmHvs0B+OpCW5GVHUNjv9rOmY0IvSIRcf7zGUDTDQM8=" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <header>
+        <img src="assets/img/Logo.png" alt="logo">
+        <nav>
+            <ul>
+                <li><a href="#">about us</a></li>
+                <li><a href="#">projects</a></li>
+                <li><a href="#">news</a></li>
+                <li><a href="#">contact</a></li>
+            </ul>
+        </nav>
+        <div class="social-media">
+            <div class="circle">
+                <img src="assets/img/icons/facebook.svg" alt="facebook">
+            </div>
+            <div class="circle">
+                <img src="assets/img/icons/twitter.svg" alt="twitter">
+            </div>
+            <div class="circle">
+                <img src="assets/img/icons/instagram.svg" alt="instagram">
+            </div>
+        </div>
+    </header>
+    <section class="swiper main-sec">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide bg-1">
+                <h1>simple & modern</h1>
+                <h2>we make the world beautiful everyday</h2>
+            </div>
+            <div class="swiper-slide bg-2">
+                <h1>simple & modern</h1>
+                <h2>we make the world beautiful everyday</h2>
+            </div>
+            <div class="swiper-slide bg-3">
+                <h1>simple & modern</h1>
+                <h2>we make the world beautiful everyday</h2>
+            </div>
+            <div class="swiper-slide bg-4">
+                <h1>simple & modern</h1>
+                <h2>we make the world beautiful everyday</h2>
+            </div>
+            <div class="swiper-slide bg-5">
+                <h1>simple & modern</h1>
+                <h2>we make the world beautiful everyday</h2>
+            </div>
+        </div>
+        <div class="swiper-pagination"></div>
+    </section>
+    <section class="wwd-sec">
+        <div class="title-container">
+            <div class="line"></div>
+            <h2>what we do</h2>
+        </div>
+        <div class="project1-container">
+            <img src="assets/img/trade-center.jpg" alt="trade-center">
+            <div class="project-descr">
+                <h4>one world</h4>
+                <h2>trade center</h2>
+                <p>Increasing prosperity in our lives can be accomplished by having the right frame of mind. The truth
+                    is, our thoughts are very powerful.</p>
+
+                <button type="button" class="btn-details">more details</button>
+                <ul>
+                    <li><a href="#">New York City, United States - 1776 feet </a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="project2-container">
+            <img src="assets/img/commerce-centre.jpg" alt="commerce-centre">
+            <div class="project-descr">
+                <h4>international</h4>
+                <h2>commerce center</h2>
+                <p>Successful businesses have many things in common, today we’ll look at the big ‘R’ of recognition and
+                    how a digital advertising network may help.</p>
+
+                <button type="button" class="btn-details">more details</button>
+                <ul>
+                    <li><a href="#">Hong Kong - 1588 feet</a></li>
+                </ul>
+            </div>
+        </div>
+    </section>
+    <section class="news-sec">
+        <div class="title-container">
+            <div class="line"></div>
+            <h2>latest news</h2>
+        </div>
+        <div class="swiper-secondary">
+            <div class="swiper-wrapper" id="content-fill-target">
+                <!-- filled dynamically using data from JSON -->
+            </div>
+            <div class="swiper-button-next"></div>
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-pagination"></div>
+        </div>
+    </section>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="assets/js/plugins.js"></script>
+    <script src="assets/js/main.js"></script>
+</body>
+
+</html>

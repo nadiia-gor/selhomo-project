@@ -1,0 +1,293 @@
+@import '_general.scss';
+@import '_variables.scss';
+@import '_classes.scss';
+
+@font-face {
+  font-family: 'Montserrat';
+  src: url('/homeworks_128/exam/assets/fonts/Montserrat/Montserrat-VariableFont_wght.ttf')
+    format('truetype');
+}
+
+@font-face {
+  font-family: 'Open Sans';
+  src: url('/homeworks_128/exam/assets/fonts/Open_Sans/OpenSans-VariableFont_wdth\,wght.ttf')
+    format('truetype');
+}
+
+@font-face {
+  font-family: 'Source Sans Pro';
+  src: url('/homeworks_128/exam/assets/fonts/Source_Sans/SourceSans3-VariableFont_wght.ttf')
+    format('truetype');
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 53px 215px;
+  background-color: transparent;
+
+  nav {
+    ul {
+      display: flex;
+      gap: 70px;
+
+      li {
+        padding-left: 14px;
+      }
+
+      li:hover::marker {
+        content: url('/homeworks_128/exam/assets/img/dot.svg');
+      }
+
+      li::marker {
+        content: url('/homeworks_128/exam/assets/img/transp-dot.svg');
+      }
+
+      a {
+        text-decoration: none;
+        color: $primary-color;
+        font-family: $sourcesans;
+        font-size: 0.875rem;
+        font-weight: 400;
+        text-transform: uppercase;
+      }
+    }
+  }
+
+  .social-media {
+    display: flex;
+    gap: 20px;
+
+    .circle {
+      width: 40px;
+      height: 40px;
+      border: 1px solid $primary-color;
+      border-radius: 50%;
+      text-align: center;
+      padding-top: 9px;
+    }
+  }
+}
+
+.main-sec {
+  --swiper-pagination-bullet-vertical-gap: 40px;
+  height: 800px;
+
+  .swiper-pagination {
+    margin-right: 52px;
+  }
+
+  .swiper-pagination-bullet {
+    background-color: transparent;
+    opacity: 1;
+    border: 1px solid $primary-color;
+  }
+
+  .swiper-pagination-bullet-active {
+    background: $primary-color;
+  }
+
+  .swiper-slide {
+    padding-top: 330px;
+  }
+  h1 {
+    color: $primary-color;
+    font-family: $montserrat;
+    font-size: 5rem;
+    font-weight: 700;
+    letter-spacing: 8px;
+    text-transform: uppercase;
+    text-align: center;
+  }
+
+  h2 {
+    color: $primary-color;
+    font-family: $montserrat;
+    font-size: 1.125rem;
+    font-weight: 400;
+    letter-spacing: 5.4px;
+    text-transform: uppercase;
+    text-align: center;
+  }
+}
+
+.bg-1 {
+  background: url('/homeworks_128/exam/assets/img/bg-1.png');
+  background-size: cover;
+}
+
+.bg-2 {
+  background: url('/homeworks_128/exam/assets/img/bg-2.png');
+  background-size: cover;
+}
+
+.bg-3 {
+  background: url('/homeworks_128/exam/assets/img/bg-3.png');
+  background-size: cover;
+}
+
+.bg-4 {
+  background: url('/homeworks_128/exam/assets/img/bg-4.png');
+  background-size: cover;
+}
+
+.bg-5 {
+  background: url('/homeworks_128/exam/assets/img/bg-5.png');
+  background-size: cover;
+}
+
+.wwd-sec {
+  padding-top: 95px;
+  padding-bottom: 150px;
+
+  .title-container {
+    @extend %title-container;
+    .line {
+      margin: 0 auto;
+      width: 100px;
+      border-bottom: 1px solid $secondary-color;
+    }
+    h2 {
+      @extend %title-style;
+      text-align: center;
+    }
+  }
+
+  h4 {
+    color: $secondary-color;
+    font-family: $montserrat;
+    font-size: 1.375rem;
+    font-weight: 400;
+    text-transform: uppercase;
+  }
+
+  h2 {
+    @extend %title-style;
+  }
+
+  p {
+    color: $secondary-color;
+    font-family: $opensans;
+    font-size: 1.125rem;
+    font-weight: 400;
+    line-height: 30px;
+    width: 470px;
+  }
+
+  .btn-details {
+    margin-top: 40px;
+    margin-bottom: 60px;
+    background-color: transparent;
+    border: 1px solid $secondary-color;
+    color: $secondary-color;
+    padding: 16px 41px 17px;
+    text-transform: uppercase;
+  }
+
+  .btn-details:hover {
+    background-color: $secondary-color;
+    color: white;
+  }
+
+  a {
+    text-decoration: none;
+    color: #000;
+    font-family: $opensans;
+    font-style: italic;
+    font-weight: 400;
+    font-size: 0.9375rem;
+  }
+
+  a:hover {
+    text-decoration: underline;
+  }
+
+  a:focus {
+    color: #55b7ff;
+  }
+
+  li {
+    padding-left: 10px;
+    margin-left: 10px;
+  }
+
+  li::marker {
+    content: url('/homeworks_128/exam/assets/img/loc-marker.svg');
+  }
+
+  .project1-container {
+    display: flex;
+    justify-content: center;
+    gap: 70px;
+    margin-bottom: 175px;
+    img {
+      width: 630px;
+      height: 470px;
+      object-fit: cover;
+      object-position: 90% 10%;
+      box-shadow: -260px -56px 0 0 #55b7ff;
+    }
+  }
+
+  .project2-container {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: center;
+    gap: 70px;
+    img {
+      width: 630px;
+      height: 470px;
+      object-fit: cover;
+      object-position: 90% 10%;
+      box-shadow: 260px -56px 0 0 #7e5aff;
+    }
+  }
+}
+
+.news-sec {
+  background: url('/homeworks_128/exam/assets/img/news-background.jpg');
+  .title-container {
+    @extend %title-container;
+    margin-top: 120px;
+
+    .line {
+      margin: 0 auto;
+      width: 100px;
+      border-bottom: 1px solid $primary-color;
+    }
+    h2 {
+      @extend %title-style;
+      text-align: center;
+      color: $primary-color;
+    }
+  }
+
+  .swiper-secondary {
+    padding-left: 115px;
+    padding-right: 115px;
+  }
+
+  .swiper-slide {
+    width: 370px;
+    height: 514px;
+    background-color: $primary-color;
+    display: flex;
+    flex-direction: column;
+
+    img {
+      height: 240px;
+      object-fit: cover;
+    }
+
+    .author-container {
+      display: flex;
+
+      img {
+        height: 60px;
+        width: 60px;
+        border-radius: 50%;
+      }
+    }
+  }
+}
