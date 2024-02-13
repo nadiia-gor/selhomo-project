@@ -6,7 +6,7 @@ function fillContentArray(dataArray) {
   const sliderContentArray = dataArray.map(
     (item) =>
       `
-      <div class="swiper-slide">
+      <div class="swiper-slide news-container">
       <img src="${item.image}"><br>
           ${item.title}<br>
           ${item.anons}<br>
@@ -24,6 +24,8 @@ function fillContentArray(dataArray) {
   targetElement.innerHTML = sliderContentArray.join('');
 
   new Swiper('.swiper-secondary', {
+    direction: 'horizontal',
+    cssMode: true,
     loop: true,
     // autoplay: {
     //   delay: 4000,
@@ -40,5 +42,6 @@ function fillContentArray(dataArray) {
     },
     slidesPerView: 3,
     spaceBetween: 30,
+    // slidesPerView: 'auto',
   });
 }
