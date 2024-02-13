@@ -6,15 +6,7 @@ const swiper = new Swiper('.swiper', {
     // disableOnInteraction: true,
   },
   pagination: {
-    el: '.swiper-pagination',
+    el: '.first-pagination',
     clickable: true,
   },
 });
-
-// const swiperSecondary = new Swiper('.swiper-secondary', {
-//   loop: true,
-//   pagination: {
-//     el: '.swiper-pagination',
-//     clickable: true,
-//   },
-// });

@@ -4,19 +4,19 @@
 
 @font-face {
   font-family: 'Montserrat';
-  src: url('/homeworks_128/exam/assets/fonts/Montserrat/Montserrat-VariableFont_wght.ttf')
+  src: url('../fonts/Montserrat/Montserrat-VariableFont_wght.ttf')
     format('truetype');
 }
 
 @font-face {
   font-family: 'Open Sans';
-  src: url('/homeworks_128/exam/assets/fonts/Open_Sans/OpenSans-VariableFont_wdth\,wght.ttf')
+  src: url('../fonts/Open_Sans/OpenSans-VariableFont_wdth\,wght.ttf')
     format('truetype');
 }
 
 @font-face {
   font-family: 'Source Sans Pro';
-  src: url('/homeworks_128/exam/assets/fonts/Source_Sans/SourceSans3-VariableFont_wght.ttf')
+  src: url('../fonts/Source_Sans/SourceSans3-VariableFont_wght.ttf')
     format('truetype');
 }
 
@@ -37,11 +37,11 @@ header {
       }
 
       li:hover::marker {
-        content: url('/homeworks_128/exam/assets/img/dot.svg');
+        content: url('../img/dot.svg');
       }
 
       li::marker {
-        content: url('/homeworks_128/exam/assets/img/transp-dot.svg');
+        content: url('../img/transp-dot.svg');
       }
 
       a {
@@ -74,7 +74,7 @@ header {
   --swiper-pagination-bullet-vertical-gap: 40px;
   height: 800px;
 
-  .swiper-pagination {
+  .first-pagination {
     margin-right: 52px;
   }
 
@@ -113,27 +113,27 @@ header {
 }
 
 .bg-1 {
-  background: url('/homeworks_128/exam/assets/img/bg-1.png');
+  background: url('../img/bg-1.png');
   background-size: cover;
 }
 
 .bg-2 {
-  background: url('/homeworks_128/exam/assets/img/bg-2.png');
+  background: url('../img/bg-2.png');
   background-size: cover;
 }
 
 .bg-3 {
-  background: url('/homeworks_128/exam/assets/img/bg-3.png');
+  background: url('../img/bg-3.png');
   background-size: cover;
 }
 
 .bg-4 {
-  background: url('/homeworks_128/exam/assets/img/bg-4.png');
+  background: url('../img/bg-4.png');
   background-size: cover;
 }
 
 .bg-5 {
-  background: url('/homeworks_128/exam/assets/img/bg-5.png');
+  background: url('../img/bg-5.png');
   background-size: cover;
 }
 
@@ -213,7 +213,7 @@ header {
   }
 
   li::marker {
-    content: url('/homeworks_128/exam/assets/img/loc-marker.svg');
+    content: url('../img/loc-marker.svg');
   }
 
   .project1-container {
@@ -246,10 +246,10 @@ header {
 }
 
 .news-sec {
-  background: url('/homeworks_128/exam/assets/img/news-background.jpg');
+  background: url('../img/news-background.jpg');
+  padding-top: 120px;
   .title-container {
     @extend %title-container;
-    margin-top: 120px;
 
     .line {
       margin: 0 auto;

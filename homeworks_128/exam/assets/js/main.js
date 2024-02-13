@@ -1,4 +1,4 @@
-const jsonData = fetch('/homeworks_128/exam/data/news.json')
+const jsonData = fetch('../data/news.json')
   .then((response) => response.json())
   .then((jsonDataArray) => fillContentArray(jsonDataArray));
 
@@ -25,17 +25,17 @@ function fillContentArray(dataArray) {
 
   new Swiper('.swiper-secondary', {
     loop: true,
-    autoplay: {
-      delay: 4000,
-      // disableOnInteraction: true,
-    },
-    navigation: {
-      nextEl: '.swiper-button-next',
-      prevEl: '.swiper-button-prev',
-    },
+    // autoplay: {
+    //   delay: 4000,
+    //   disableOnInteraction: true,
+    // },
+    // navigation: {
+    //   nextEl: '.swiper-button-next',
+    //   prevEl: '.swiper-button-prev',
+    // },
 
     pagination: {
-      el: '.swiper-pagination',
+      el: '.secondary-pagination',
       clickable: true,
     },
     slidesPerView: 3,
