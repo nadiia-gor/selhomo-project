@@ -6,42 +6,41 @@ function fillContentArray(dataArray) {
   const sliderContentArray = dataArray.map(
     (item) =>
       `
-      <div class="swiper-slide news-container">
-      <img src="${item.image}"><br>
-          ${item.title}<br>
-          ${item.anons}<br>
+      <div class="swiper-slide">
+      <img src="${item.image}" class="swiper-lazy"><br>
+      <div class="news-desc">
+      <h4>${item.title}</h4>
+          <h5>${item.anons}</h5>
           <div class="author-container">
           <img src="${item.author.avatar}">
               <div class="author-about">
-                ${item.author.name}<br>
-                ${item.date}   
+                <h6>${item.author.name}</h6>
+                <p>${item.date}</p>   
               </div>
           </div>
+      </div>
+      <div class="swiper-lazy-preloader"></div>
     </div>
     `
   );
   const targetElement = document.getElementById('content-fill-target');
   targetElement.innerHTML = sliderContentArray.join('');
 
-  new Swiper('.swiper-secondary', {
-    direction: 'horizontal',
-    cssMode: true,
+  new Swiper('.swiper-container', {
+    slidesPerView: 3,
+    lazy: true,
     loop: true,
-    // autoplay: {
-    //   delay: 4000,
-    //   disableOnInteraction: true,
-    // },
-    // navigation: {
-    //   nextEl: '.swiper-button-next',
-    //   prevEl: '.swiper-button-prev',
-    // },
-
+    navigation: {
+      nextEl: '.news-btn-prev',
+      prevEl: '.news-btn-next',
+    },
     pagination: {
-      el: '.secondary-pagination',
+      el: '.news-pag',
       clickable: true,
     },
-    slidesPerView: 3,
-    spaceBetween: 30,
-    // slidesPerView: 'auto',
+    autoplay: {
+      delay: 4000,
+      // disableOnInteraction: true,
+    },
   });
 }

@@ -6,6 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Monticello</title>
     <link rel="stylesheet" href="assets/css/styles.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/lightgallery/dist/css/lightgallery.min.css">
+    <link rel="stylesheet" href="assets/plugins/leaflet.css">
     <script src="https://code.jquery.com/jquery-3.7.1.slim.min.js"
         integrity="sha256-kmHvs0B+OpCW5GVHUNjv9rOmY0IvSIRcf7zGUDTDQM8=" crossorigin="anonymous"></script>
 </head>
@@ -97,17 +99,75 @@
             <div class="line"></div>
             <h2>latest news</h2>
         </div>
-        <div class="swiper-secondary">
+        <div class="swiper-container">
             <div class="swiper-wrapper" id="content-fill-target">
-                <!-- filled dynamically using data from JSON -->
+
             </div>
-            <!-- <div class="swiper-button-next"></div>
-            <div class="swiper-button-prev"></div> -->
-            <div class="swiper-pagination secondary-pagination"></div>
+            <div class="news-btn-prev"></div>
+            <div class="news-btn-next"></div>
+            <div class="news-pag"></div>
         </div>
     </section>
+    <section class="gallery-sec">
+        <div class="title-container">
+            <div class="line"></div>
+            <h2>gallery</h2>
+        </div>
+        <div id="lightgallery">
+            <a href="assets/img/gallery-pictures/arch1.jpg">
+                <img src="assets/img/icons/magnifier.svg" class="magnifier" alt="magnifier">
+                <img src="assets/img/gallery-pictures/arch1.jpg" class="arch1" alt="arch-1">
+            </a>
+            <a href="assets/img/gallery-pictures/arch2.jpg">
+                <img src="assets/img/icons/magnifier.svg" class="magnifier" alt="magnifier">
+                <img src="assets/img/gallery-pictures/arch2.jpg" alt="arch-2">
+            </a>
+            <a href="assets/img/gallery-pictures/arch3.jpg">
+                <img src="assets/img/icons/magnifier.svg" class="magnifier" alt="magnifier">
+                <img src="assets/img/gallery-pictures/arch3.jpg" alt="arch-3">
+            </a>
+            <a href="assets/img/gallery-pictures/arch4.jpg">
+                <img src="assets/img/icons/magnifier.svg" class="magnifier" alt="magnifier">
+                <img src="assets/img/gallery-pictures/arch4.jpg" alt="arch-4">
+            </a>
+            <a href="assets/img/gallery-pictures/arch5.jpg">
+                <img src="assets/img/icons/magnifier.svg" class="magnifier" alt="magnifier">
+                <img src="assets/img/gallery-pictures/arch5.jpg" alt="arch-5">
+            </a>
+        </div>
+        <div class="see-more-btn"><button type="button" class="btn-details">see more</button></div>
+    </section>
+    <section class="map-sec" id="map-section">
+        <div id="map">
+            <a href="#map-section" class="map-link" onclick="initMap(this)">
+                <img src="assets/img/pin-prev.png" alt="map-prev">
+                <span>Click to interact with the map</span>
+            </a>
+        </div>
+    </section>
+    <footer>
+        <div class="footer-container">
+            <div class="logo">
+                <img src="assets/img/Logo.png" alt="logo">
+                <p>Copyrights © 2020 Montichello</p>
+            </div>
+            <div class="social-media">
+                <div class="circle">
+                    <img src="assets/img/icons/facebook.svg" alt="facebook">
+                </div>
+                <div class="circle">
+                    <img src="assets/img/icons/twitter.svg" alt="twitter">
+                </div>
+                <div class="circle">
+                    <img src="assets/img/icons/instagram.svg" alt="instagram">
+                </div>
+            </div>
+        </div>
+    </footer>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/lightgallery/dist/js/lightgallery.min.js"></script>
+    <script src="assets/plugins/leaflet.js"></script>
     <script src="assets/js/plugins.js"></script>
     <script src="assets/js/main.js"></script>
 </body>
