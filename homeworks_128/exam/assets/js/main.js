@@ -1,3 +1,43 @@
+// window.addEventListener('scroll', function () {
+//   const header = document.getElementById('monticello-header');
+//   if (window.scrollY >= 800) {
+//     header.style.animation = 'changeBackground 0.3s ease forwards';
+//     if (!header.classList.contains('scrolled')) {
+//       header.classList.add('scrolled');
+//     }
+//   } else {
+//     header.style.animation = 'none';
+//     if (header.classList.contains('scrolled')) {
+//       header.classList.remove('scrolled');
+//     }
+//   }
+// });
+
+$(window).on('scroll', function () {
+  const header = $('#monticello-header');
+  if ($(window).scrollTop() >= 800) {
+    header.css('animation', 'changeBackground 0.3s ease forwards');
+    if (!header.hasClass('scrolled')) {
+      header.addClass('scrolled');
+    }
+  } else {
+    header.css('animation', 'none');
+    if (header.hasClass('scrolled')) {
+      header.removeClass('scrolled');
+    }
+  }
+});
+
+function scrollToSection(selector) {
+  // $(selector).offset().top
+  const top = document.querySelector(selector).offsetTop;
+
+  window.scrollTo({
+    top: top,
+    behavior: 'smooth',
+  });
+}
+
 const jsonData = fetch('../data/news.json')
   .then((response) => response.json())
   .then((jsonDataArray) => fillContentArray(jsonDataArray));

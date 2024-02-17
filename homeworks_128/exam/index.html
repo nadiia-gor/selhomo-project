@@ -13,7 +13,7 @@
 </head>
 
 <body>
-    <header>
+    <header id="monticello-header">
         <img src="assets/img/Logo.png" alt="logo">
         <nav>
             <ul>
@@ -24,43 +24,54 @@
             </ul>
         </nav>
         <div class="social-media">
-            <div class="circle">
+            <button type="button" class="circle">
                 <img src="assets/img/icons/facebook.svg" alt="facebook">
-            </div>
-            <div class="circle">
+            </button>
+            <button type="button" class="circle">
                 <img src="assets/img/icons/twitter.svg" alt="twitter">
-            </div>
-            <div class="circle">
+            </button>
+            <button type="button" class="circle">
                 <img src="assets/img/icons/instagram.svg" alt="instagram">
-            </div>
+            </button>
         </div>
     </header>
-    <section class="swiper main-sec">
-        <div class="swiper-wrapper">
-            <div class="swiper-slide bg-1">
-                <h1>simple & modern</h1>
-                <h2>we make the world beautiful everyday</h2>
-            </div>
-            <div class="swiper-slide bg-2">
-                <h1>simple & modern</h1>
-                <h2>we make the world beautiful everyday</h2>
-            </div>
-            <div class="swiper-slide bg-3">
-                <h1>simple & modern</h1>
-                <h2>we make the world beautiful everyday</h2>
-            </div>
-            <div class="swiper-slide bg-4">
-                <h1>simple & modern</h1>
-                <h2>we make the world beautiful everyday</h2>
-            </div>
-            <div class="swiper-slide bg-5">
-                <h1>simple & modern</h1>
-                <h2>we make the world beautiful everyday</h2>
-            </div>
+    <section class="main-sec">
+        <div class="heading-text">
+            <h1>simple & modern</h1>
+            <h2>we make the world beautiful everyday</h2>
         </div>
-        <div class="swiper-pagination first-pagination"></div>
+        <div class="scroll">
+            <button type="button" class="circle" onclick="scrollToSection('#wwd-sec')">
+                <img src="assets/img/arrow-right.svg" alt="scroll-arrow">
+            </button>
+        </div>
+        <div class="swiper" id="swiper">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide bg-1">
+                    <!-- <h1>simple & modern</h1>
+                    <h2>we make the world beautiful everyday</h2> -->
+                </div>
+                <div class="swiper-slide bg-2">
+                    <!-- <h1>simple & modern</h1>
+                    <h2>we make the world beautiful everyday</h2> -->
+                </div>
+                <div class="swiper-slide bg-3">
+                    <!-- <h1>simple & modern</h1>
+                    <h2>we make the world beautiful everyday</h2> -->
+                </div>
+                <div class="swiper-slide bg-4">
+                    <!-- <h1>simple & modern</h1>
+                    <h2>we make the world beautiful everyday</h2> -->
+                </div>
+                <div class="swiper-slide bg-5">
+                    <!-- <h1>simple & modern</h1>
+                    <h2>we make the world beautiful everyday</h2> -->
+                </div>
+            </div>
+            <div class="swiper-pagination first-pagination"></div>
+        </div>
     </section>
-    <section class="wwd-sec">
+    <section class="wwd-sec" id="wwd-sec">
         <div class="title-container">
             <div class="line"></div>
             <h2>what we do</h2>
@@ -145,6 +156,28 @@
             </a>
         </div>
     </section>
+    <section class="form-sec">
+        <div class="title-container">
+            <div class="line"></div>
+            <h2>get in touch</h2>
+        </div>
+        <div class="contact-form-container">
+            <div class="contact-form-info">
+                <ul>
+                    <li><a href="#">91 Nolan Extensions Suite 670</a></li>
+                    <li><a href="#">+001 356-868-2454</a></li>
+                    <li><a href="#">montichello@service.com</a></li>
+                    <li><a href="#">From 07:05AM to 19:30PM</a></li>
+                </ul>
+            </div>
+            <form action="">
+                <input type="text" id="name" name="name" placeholder="Name" required>
+                <input type="email" id="email" name="email" placeholder="Email" required>
+                <button type="button">Submit</button>
+            </form>
+        </div>
+
+    </section>
     <footer>
         <div class="footer-container">
             <div class="logo">
@@ -152,15 +185,15 @@
                 <p>Copyrights © 2020 Montichello</p>
             </div>
             <div class="social-media">
-                <div class="circle">
+                <button type="button" class="circle">
                     <img src="assets/img/icons/facebook.svg" alt="facebook">
-                </div>
-                <div class="circle">
+                </button>
+                <button type="button" class="circle">
                     <img src="assets/img/icons/twitter.svg" alt="twitter">
-                </div>
-                <div class="circle">
+                </button>
+                <button type="button" class="circle">
                     <img src="assets/img/icons/instagram.svg" alt="instagram">
-                </div>
+                </button>
             </div>
         </div>
     </footer>

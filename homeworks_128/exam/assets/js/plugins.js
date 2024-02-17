@@ -6,7 +6,7 @@ const swiper = new Swiper('.swiper', {
     // disableOnInteraction: true,
   },
   pagination: {
-    el: '.swiper-pagination.first-pagination',
+    el: '.first-pagination',
     clickable: true,
   },
 });
