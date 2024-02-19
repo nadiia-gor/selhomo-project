@@ -38,7 +38,7 @@ function scrollToSection(selector) {
   });
 }
 
-const jsonData = fetch('../data/news.json')
+const jsonData = fetch('./data/news.json')
   .then((response) => response.json())
   .then((jsonDataArray) => fillContentArray(jsonDataArray));
 
@@ -47,12 +47,12 @@ function fillContentArray(dataArray) {
     (item) =>
       `
       <div class="swiper-slide">
-      <img src="${item.image}" class="swiper-lazy"><br>
+      <img src="${item.image}" loading="lazy"><br>
       <div class="news-desc">
       <h4>${item.title}</h4>
           <h5>${item.anons}</h5>
           <div class="author-container">
-          <img src="${item.author.avatar}">
+          <img src="${item.author.avatar}" loading="lazy">
               <div class="author-about">
                 <h6>${item.author.name}</h6>
                 <p>${item.date}</p>   
@@ -82,5 +82,25 @@ function fillContentArray(dataArray) {
       delay: 4000,
       // disableOnInteraction: true,
     },
+    breakpoints: {
+      768: {
+        slidesPerView: 2,
+      },
+      1440: {
+        slidesPerView: 3,
+      },
+    },
   });
 }
+
+// const getBreakpointFromDOM = () =>
+//   window.getComputedStyle(document.body, ':before').content.replace(/\"/g, '');
+
+//   function resizeCallback() {
+//     const currentBreakpoint = getBreakpointFromDOM();
+//     if (sliderInitBreakpoint !== currentBreakpoint) {
+//       constructSlidersWithParams(currentBreakpoint);
+//       sliderInitBreakpoint = currentBreakpoint;
+//     }
+//   }
+//   window.addEventListener('resize', resizeCallback);

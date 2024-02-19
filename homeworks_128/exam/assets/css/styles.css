@@ -54,7 +54,7 @@ main {
           flex-grow: 1;
 }
 
-.news-sec .swiper-container .swiper-wrapper .swiper-slide .news-desc .author-container .author-about h6, .news-sec .swiper-container .swiper-wrapper .swiper-slide .news-desc h4, .wwd-sec h2, .form-sec .title-container h2, .gallery-sec .title-container h2, .news-sec .title-container h2, .wwd-sec .title-container h2 {
+.news-sec .swiper-container .swiper-wrapper .swiper-slide .news-desc .author-container .author-about h6, .news-sec .swiper-container .swiper-wrapper .swiper-slide .news-desc h4, .wwd-sec h2, .title-container h2, .gallery-sec .title-container h2, .news-sec .title-container h2, .wwd-sec .title-container h2 {
   font-family: "Montserrat";
   font-size: 2.75rem;
   font-weight: 700;
@@ -62,7 +62,7 @@ main {
   color: #2c4058;
 }
 
-.form-sec .title-container, .gallery-sec .title-container, .news-sec .title-container, .wwd-sec .title-container {
+.title-container, .gallery-sec .title-container, .news-sec .title-container, .wwd-sec .title-container {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -75,16 +75,16 @@ main {
       -ms-flex-pack: center;
           justify-content: center;
 }
-.form-sec .title-container .line, .gallery-sec .title-container .line, .news-sec .title-container .line, .wwd-sec .title-container .line {
+.title-container .line {
   margin: 0 auto;
   width: 100px;
   border-bottom: 1px solid #2c4058;
 }
-.form-sec .title-container h2, .gallery-sec .title-container h2, .news-sec .title-container h2, .wwd-sec .title-container h2 {
+.title-container h2, .gallery-sec .title-container h2, .news-sec .title-container h2, .wwd-sec .title-container h2 {
   text-align: center;
 }
 
-.gallery-sec .see-more-btn .btn-details, .wwd-sec .btn-details {
+.contact-form-container .contact-form-info form button, .gallery-sec .see-more-btn .btn-details, .wwd-sec .btn-details {
   background-color: transparent;
   border: 1px solid #2c4058;
   color: #2c4058;
@@ -114,7 +114,7 @@ header {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  padding: 53px 215px;
+  padding: 3.3125em 13.4375em;
   background: transparent;
 }
 @-webkit-keyframes changeBackground {
@@ -158,7 +158,7 @@ header nav ul a {
 }
 
 .scrolled {
-  padding: 33px 215px;
+  padding: 23px 215px;
   -webkit-transition: all 0.2s ease;
   transition: all 0.2s ease;
 }
@@ -201,6 +201,7 @@ header nav ul a {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  width: 1000px;
   position: absolute;
   top: 50%;
   left: 50%;
@@ -215,6 +216,7 @@ header nav ul a {
   font-weight: 700;
   letter-spacing: 8px;
   text-transform: uppercase;
+  text-align: center;
 }
 .main-sec .heading-text h2 {
   color: #fff;
@@ -249,6 +251,7 @@ header nav ul a {
 }
 .main-sec .swiper {
   height: 800px;
+  width: 100%;
 }
 .main-sec .swiper .first-pagination {
   margin-right: 52px;
@@ -471,21 +474,28 @@ header nav ul a {
   height: 40px;
   width: 40px;
   cursor: pointer;
-  z-index: 1;
+  z-index: 2;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 .news-sec .swiper-container .news-btn-prev {
-  right: 260px;
+  right: 60px;
   margin-top: -255px;
-  background: url("../img/arrow-right.svg");
-  background-position: center;
-  background-repeat: no-repeat;
 }
 .news-sec .swiper-container .news-btn-next {
-  left: 260px;
+  left: 60px;
   margin-top: -255px;
-  background: url("../img/arrow-left.svg");
-  background-position: center;
-  background-repeat: no-repeat;
+}
+.news-sec .swiper-container .news-btn-prev:hover,
+.news-sec .swiper-container .news-btn-next:hover {
+  background: linear-gradient(251deg, #7e5aff -2.19%, #55b7ff 103.21%);
 }
 .news-sec .swiper-container .news-pag {
   display: -webkit-box;
@@ -606,17 +616,22 @@ header nav ul a {
   color: #fff;
 }
 
+.map-sec {
+  position: relative;
+}
 .map-sec #map {
   height: 696px;
   width: 100%;
   background-color: #a0a0a0;
   position: relative;
+  z-index: 1;
 }
 .map-sec #map .map-link {
   position: relative;
   display: block;
   text-decoration: none;
   height: 696px;
+  width: 100%;
 }
 .map-sec #map .map-link img {
   width: 100%;
@@ -649,24 +664,42 @@ header nav ul a {
   opacity: 1;
 }
 
-.form-sec {
-  margin: 0 auto;
-  width: 770px;
-  height: 450px;
-  background-color: #fff;
-}
-.form-sec .title-container {
+.title-container {
   padding-top: 60px;
   margin-bottom: 42px;
 }
-.form-sec .contact-form-container {
+
+.contact-form-container {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  margin: 0 auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin: 0 auto;
+  padding: 0 50px 70px;
+  width: 770px;
+  height: 450px;
+  border: 1px solid #fff;
+  background-color: #fff;
+  position: absolute;
+  top: -250px;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  z-index: 2;
+}
+.contact-form-container .contact-form-info {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   gap: 54px;
-  padding: 0 60px 70px;
 }
-.form-sec .contact-form-container form {
+.contact-form-container .contact-form-info ul {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -675,9 +708,36 @@ header nav ul a {
       -ms-flex-direction: column;
           flex-direction: column;
   gap: 30px;
+}
+.contact-form-container .contact-form-info ul li {
+  font-family: "Montserrat";
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 28px;
+  list-style: none;
+}
+.contact-form-container .contact-form-info ul li i {
+  margin-right: 12px;
+  color: #7e5aff;
+}
+.contact-form-container .contact-form-info ul li a {
+  text-decoration: none;
+  color: #000;
+}
+.contact-form-container .contact-form-info form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   width: 310px;
 }
-.form-sec .contact-form-container form input {
+.contact-form-container .contact-form-info form > * {
+  margin-bottom: 35px;
+}
+.contact-form-container .contact-form-info form input {
   -webkit-appearance: none;
      -moz-appearance: none;
           appearance: none;
@@ -688,19 +748,28 @@ header nav ul a {
   color: #000;
   font-family: "Montserrat";
 }
-.form-sec .contact-form-container form input:focus {
+.contact-form-container .contact-form-info form input:focus {
   outline: 0;
   border-bottom: 1px solid #2c4058;
+}
+.contact-form-container .contact-form-info form button {
+  width: 140px;
+  margin-left: auto;
+}
+.contact-form-container .contact-form-info form button:hover {
+  background-color: #2c4058;
+  color: #fff;
 }
 
 footer {
   background: url("../img/bg-footer.png");
   background-size: cover;
   padding: 203px 0 234px;
+  position: relative;
 }
 footer .footer-container {
   max-width: 770px;
-  margin: 0 auto;
+  margin: 50px auto 0;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -717,4 +786,57 @@ footer .footer-container .logo p {
 }
 footer .footer-container .social-media {
   margin-top: 7px;
+}
+
+@media screen and (min-width: 992px) and (max-width: 1440px) {
+  header {
+    padding: 3.3125em 6em;
+  }
+  header .logo {
+    width: 160px;
+    height: 36px;
+  }
+  header nav ul {
+    gap: 40px;
+  }
+  .scrolled {
+    padding: 1.4375em 6em;
+  }
+  .main-sec .heading-text h1 {
+    font-size: 4rem;
+  }
+  .main-sec .swiper {
+    height: 650px;
+  }
+  .wwd-sec {
+    padding-top: 80px;
+    padding-bottom: 100px;
+  }
+  .wwd-sec .project1-container,
+  .wwd-sec .project2-container {
+    margin-top: 100px;
+    margin-bottom: 125px;
+    gap: 40px;
+  }
+  .wwd-sec .project1-container img {
+    -webkit-box-shadow: -150px -50px 0 0 #55b7ff;
+            box-shadow: -150px -50px 0 0 #55b7ff;
+    width: 420px;
+    height: 313px;
+  }
+  .wwd-sec .project2-container img {
+    -webkit-box-shadow: 120px -50px 0 0 #7e5aff;
+            box-shadow: 120px -50px 0 0 #7e5aff;
+    width: 420px;
+    height: 313px;
+  }
+  .news-sec .swiper-container {
+    width: 800px;
+  }
+  .gallery-sec #lightgallery {
+    width: 850px;
+  }
+  .map-sec #map {
+    height: 550px;
+  }
 }
