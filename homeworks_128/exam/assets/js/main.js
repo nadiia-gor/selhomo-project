@@ -114,3 +114,22 @@ let menu = document.querySelector('.menu');
 menuBtn.addEventListener('click', function () {
   menu.classList.toggle('active');
 });
+
+// const form = document.getElementById('feedback-form')
+
+// form.addEventListener('submit', function(e) {
+//   e.preventDefault()
+//   const errors = [];
+//   const nameFld = document.getElementById('inputName');
+//   const emailFld = document.getElementById('inputEmail');
+//   if(nameFld.value === '') {
+//     errors.push('Enter your name!');
+//     nameFld.classList.add('invalid-inp');
+//   }
+
+//   if(nameFld.value.length < 2) {
+//     errors.push('Your name is too short!');
+//     nameFld.classList.add('invalid-inp');
+//   }
+//   return false
+// })
