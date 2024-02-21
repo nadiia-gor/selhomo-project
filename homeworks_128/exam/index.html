@@ -17,14 +17,16 @@
 <body>
     <header id="monticello-header">
         <img src="assets/img/logo.svg" alt="logo" class="logo">
-        <nav>
-            <ul>
-                <li><a href="#wwd-sec">about us</a></li>
-                <li><a href="#projects">projects</a></li>
-                <li><a href="#news">news</a></li>
-                <li><a href="#contact">contact</a></li>
-            </ul>
-        </nav>
+        <div class="menu">
+            <nav>
+                <ul>
+                    <li><a href="#wwd-sec">about us</a></li>
+                    <li><a href="#projects">projects</a></li>
+                    <li><a href="#news">news</a></li>
+                    <li><a href="#contact">contact</a></li>
+                </ul>
+            </nav>
+        </div>
         <div class="social-media">
             <button type="button" class="circle">
                 <img src="assets/img/icons/facebook.svg" alt="facebook">
@@ -35,6 +37,11 @@
             <button type="button" class="circle">
                 <img src="assets/img/icons/instagram.svg" alt="instagram">
             </button>
+        </div>
+        <div class="burger-menu">
+            <div class="burger-line"></div>
+            <div class="burger-line"></div>
+            <div class="burger-line"></div>
         </div>
     </header>
     <section class="main-sec">
@@ -125,7 +132,7 @@
             <div class="news-pag"></div>
         </div>
     </section>
-    <!-- <section class="gallery-sec" id="projects">
+    <section class="gallery-sec" id="projects">
         <div class="title-container">
             <div class="line"></div>
             <h2>gallery</h2>
@@ -153,7 +160,7 @@
             </a>
         </div>
         <div class="see-more-btn"><button type="button" class="btn-details">see more</button></div>
-    </section> -->
+    </section>
     <section class="map-sec" id="map-section">
         <div id="map">
             <a href="#map-section" class="map-link" onclick="initMap(this)">
@@ -177,9 +184,9 @@
                     <li><i class="fa-regular fa-clock"></i><a href="#">From 07:05AM to 19:30PM</a></li>
                 </ul>
 
-                <form action="">
-                    <input type="text" id="name" name="name" placeholder="Name" required>
-                    <input type="email" id="email" name="email" placeholder="Email" required>
+                <form id="feedback-form" action="#" method="post">
+                    <input type="text" id="inputName" name="name" placeholder="Name" required>
+                    <input type="text" id="inputEmail" name="email" placeholder="Email" required>
                     <button type="button">Submit</button>
                 </form>
             </div>

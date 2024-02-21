@@ -83,7 +83,11 @@ function fillContentArray(dataArray) {
       // disableOnInteraction: true,
     },
     breakpoints: {
-      768: {
+      320: {
+        slidesPerView: 1,
+      },
+
+      992: {
         slidesPerView: 2,
       },
       1440: {
@@ -104,3 +108,9 @@ function fillContentArray(dataArray) {
 //     }
 //   }
 //   window.addEventListener('resize', resizeCallback);
+
+let menuBtn = document.querySelector('.burger-menu');
+let menu = document.querySelector('.menu');
+menuBtn.addEventListener('click', function () {
+  menu.classList.toggle('active');
+});
