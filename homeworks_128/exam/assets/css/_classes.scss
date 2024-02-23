@@ -1,0 +1,31 @@
+%title-style {
+  font-family: $montserrat;
+  font-size: 2.75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: $secondary-color;
+}
+
+%title-container {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  justify-content: center;
+  .line {
+    margin: 0 auto;
+    width: 100px;
+    border-bottom: 1px solid $secondary-color;
+  }
+  h2 {
+    @extend %title-style;
+    text-align: center;
+  }
+}
+
+%btn-details {
+  background-color: transparent;
+  border: 1px solid $secondary-color;
+  color: $secondary-color;
+  padding: 16px 41px 17px;
+  text-transform: uppercase;
+}
