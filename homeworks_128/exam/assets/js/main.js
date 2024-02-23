@@ -28,12 +28,13 @@ $(window).on('scroll', function () {
   }
 });
 
-function scrollToSection(selector) {
+function scrollToSection(selector, offset = 0) {
   // $(selector).offset().top
-  const top = document.querySelector(selector).offsetTop;
+  const elemPos = document.querySelector(selector).getBoundingClientRect().top;
+  const offsetPosition = elemPos + window.pageYOffset;
 
   window.scrollTo({
-    top: top,
+    top: offsetPosition + offset,
     behavior: 'smooth',
   });
 }
@@ -115,21 +116,89 @@ menuBtn.addEventListener('click', function () {
   menu.classList.toggle('active');
 });
 
-// const form = document.getElementById('feedback-form')
+const form = document.getElementById('feedback-form');
 
-// form.addEventListener('submit', function(e) {
-//   e.preventDefault()
-//   const errors = [];
-//   const nameFld = document.getElementById('inputName');
-//   const emailFld = document.getElementById('inputEmail');
-//   if(nameFld.value === '') {
-//     errors.push('Enter your name!');
-//     nameFld.classList.add('invalid-inp');
-//   }
+form.addEventListener('submit', function (e) {
+  e.preventDefault();
+  const errors = [];
 
-//   if(nameFld.value.length < 2) {
-//     errors.push('Your name is too short!');
-//     nameFld.classList.add('invalid-inp');
-//   }
-//   return false
-// })
+  const nameFld = document.getElementById('inputName');
+  const emailFld = document.getElementById('inputEmail');
+  const name = nameFld.value.trim();
+  const email = emailFld.value.trim();
+  function isValidEmail(email) {
+    var regex = /^([a-zA-Z0-9_.+-])+\@(([a-zA-Z0-9-])+\.)+([a-zA-Z0-9]{2,4})+$/;
+    return regex.test(email);
+  }
+
+  document.querySelectorAll('form-inp').forEach((elem) => {
+    elem.onfocus = function () {
+      if (this.classList.contains('invalid-inp')) {
+        this.classList.remove('invalid-inp');
+      }
+    };
+  });
+
+  if (name === '') {
+    errors.push('Enter your name!');
+    nameFld.classList.add('invalid-inp');
+  } else {
+    if (name.length < 2) {
+      errors.push('Your name is too short!');
+      nameFld.classList.add('invalid-inp');
+    }
+  }
+
+  if (email === '') {
+    errors.push('Enter your email!');
+    emailFld.classList.add('invalid-inp');
+  } else {
+    if (!isValidEmail(email)) {
+      errors.push('Incorrect email address!');
+      emailFld.classList.add('invalid-inp');
+    }
+  }
+
+  if (errors.length) {
+    toast.error(errors.join(' '));
+    return;
+  }
+
+  const CHAT_ID = '-1002140946610';
+  const BOT_TOKEN = '6937149237:AAGHHsPauycMOw4rdoooRd39fN6zS6frDUo';
+  const text = `<b>Name: </b>${name}\r\n<b>Email: </b>${email}`;
+  const url = `https://api.telegram.org/bot${BOT_TOKEN}/sendMessage?chat_id=${CHAT_ID}&text=${encodeURI(
+    text
+  )}&parse_mode=HTML`;
+
+  fetch(url)
+    .then((resp) => resp.json())
+    .then((resp) => {
+      if (resp.ok) {
+        nameFld.value = '';
+        emailFld.value = '';
+        toast.success('Your message successfully sent');
+      } else {
+        toast.error('Some error occured');
+      }
+    });
+
+  // $.ajax({
+  //   url: url,
+  //   type: 'post',
+  //   dataType: 'json',
+  //   success: function (resp) {
+  //     if (resp.ok) {
+  //       nameFld.value = '';
+  //       emailFld.value = '';
+  //       toast.success('Your message successfully sent');
+  //     } else {
+  //       toast.error('Some error occured');
+  //     }
+  //   },
+  //   error: function (err) {
+  //     toast.error(err);
+  //   },
+  // });
+  return false;
+});

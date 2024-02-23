@@ -730,6 +730,12 @@ header .burger-menu {
   text-decoration: none;
   color: #000;
 }
+.contact-form-container .contact-form-info ul li a:hover {
+  text-decoration: underline;
+}
+.contact-form-container .contact-form-info ul li a:focus {
+  color: #55b7ff;
+}
 .contact-form-container .contact-form-info form {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1092,7 +1098,7 @@ footer .footer-container .social-media {
             flex-direction: column;
   }
   .contact-form-container .contact-form-info form {
-    width: 100%;
+    width: 90%;
   }
   footer {
     padding: 500px 0 100px;

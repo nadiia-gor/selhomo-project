@@ -645,6 +645,14 @@ header {
           text-decoration: none;
           color: #000;
         }
+
+        a:hover {
+          text-decoration: underline;
+        }
+
+        a:focus {
+          color: #55b7ff;
+        }
       }
     }
 
@@ -1073,7 +1081,7 @@ footer {
       flex-direction: column;
 
       form {
-        width: 100%;
+        width: 90%;
       }
     }
   }

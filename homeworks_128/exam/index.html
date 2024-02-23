@@ -20,10 +20,10 @@
         <div class="menu">
             <nav>
                 <ul>
-                    <li><a href="#wwd-sec">about us</a></li>
-                    <li><a href="#projects">projects</a></li>
-                    <li><a href="#news">news</a></li>
-                    <li><a href="#contact">contact</a></li>
+                    <li><a onclick="scrollToSection('#wwd-sec')">about us</a></li>
+                    <li><a onclick="scrollToSection('#projects')">projects</a></li>
+                    <li><a onclick="scrollToSection('#news')">news</a></li>
+                    <li><a onclick="scrollToSection('#contact', -250)">contact</a></li>
                 </ul>
             </nav>
         </div>
@@ -188,9 +188,9 @@
                 </ul>
 
                 <form id="feedback-form" action="#" method="post">
-                    <input type="text" id="inputName" name="name" placeholder="Name" required>
-                    <input type="text" id="inputEmail" name="email" placeholder="Email" required>
-                    <button type="button">Submit</button>
+                    <input type="text" id="inputName" name="name" class="form-inp" placeholder="Name">
+                    <input type="text" id="inputEmail" name="email" class="form-inp" placeholder="Email">
+                    <button type="submit">Submit</button>
                 </form>
             </div>
         </div>
@@ -217,6 +217,7 @@
     <script src="https://cdn.jsdelivr.net/npm/lightgallery/dist/js/lightgallery.min.js"></script>
     <script src="assets/plugins/leaflet.js"></script>
     <script src="assets/js/plugins.js"></script>
+    <script src="assets/js/toast.js"></script>
     <script src="assets/js/main.js"></script>
 </body>
 
