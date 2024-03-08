@@ -1,0 +1,346 @@
+@import '_general.scss';
+@import '_classes.scss';
+
+body:before {
+  content: 'sm';
+  display: none;
+  visibility: hidden;
+}
+
+@media only screen and (min-width: 320px) and (max-width: 768px) {
+  body:before {
+    content: 'md';
+  }
+}
+@media only screen and (min-width: 769px) and (max-width: 1280px) {
+  body:before {
+    content: 'lg';
+  }
+}
+@media only screen and (min-width: 1281px) {
+  body:before {
+    content: 'xl';
+  }
+}
+
+header {
+  height: 80px;
+  background-color: #f8f1ea;
+  .header-container {
+    display: flex;
+    justify-content: space-between;
+    padding-left: 100px;
+    padding-right: 100px;
+    .header-logo {
+      padding-top: 23px;
+      padding-bottom: 23px;
+      img {
+        width: 182px;
+        height: 34px;
+      }
+    }
+    .navigation-header {
+      display: flex;
+      gap: 290px;
+      nav > ul {
+        display: flex;
+
+        a {
+          color: #000;
+        }
+
+        .bg-hw {
+          padding: 28px 15px;
+        }
+
+        .bg-hw:hover {
+          background-color: #f16a50;
+
+          a {
+            color: #fff;
+          }
+        }
+      }
+    }
+    .icons-panel-header {
+      display: flex;
+      padding-top: 23px;
+      gap: 30px;
+      .icon {
+        height: 36px;
+        width: 36px;
+      }
+    }
+  }
+}
+
+.main-sec {
+  .change-color-page {
+    background: #f8f1eab3;
+  }
+
+  .change-color-page:active {
+    background: #f16a50;
+  }
+
+  .change-color-page.is-active {
+    background: #f16a50;
+  }
+
+  .splide__pagination__page {
+    margin-right: 30px;
+    width: 15px;
+    height: 15px;
+    margin-bottom: 50px;
+  }
+
+  .splide__arrow {
+    display: none;
+  }
+
+  .main-slide1,
+  .main-slide2,
+  .main-slide3 {
+    @extend %banner-style;
+    @extend %button-style;
+    background-size: cover;
+    border: none;
+  }
+
+  .main-view-more {
+    @extend %button-style;
+  }
+
+  .main-view-more:hover {
+    @extend %button-hover-style;
+  }
+
+  .main-slide1 {
+    background: linear-gradient(180deg, #000000d6 0%, #d9d9d900 100%),
+      url('/homeworks_128/lesson_8/assets/img/mainslide1.jpg');
+  }
+
+  .main-slide2 {
+    background: linear-gradient(180deg, #000000d6 0%, #d9d9d900 100%),
+      url('/homeworks_128/lesson_8/assets/img/mainslide2.jpg');
+    background-position: center;
+  }
+
+  .main-slide3 {
+    background: linear-gradient(180deg, #000000d6 0%, #d9d9d900 100%),
+      url('/homeworks_128/lesson_8/assets/img/mainslide3.jpg');
+    background-position: center;
+  }
+
+  .content-position {
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+    width: 29%;
+    position: relative;
+    top: 120px;
+    left: 67%;
+
+    h1 {
+      text-align: center;
+    }
+
+    .main-slide-btn {
+      display: flex;
+      justify-content: center;
+    }
+  }
+}
+
+h2 {
+  margin-bottom: 50px;
+  text-align: center;
+  font-size: 32px;
+  text-transform: uppercase;
+}
+
+.second-sec {
+  padding-top: 70px;
+  #slider2 {
+    margin-left: 40px;
+    margin-right: 40px;
+  }
+
+  .splide__slide {
+    width: 224px;
+  }
+
+  .product-container {
+    padding-bottom: 20px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    // justify-content: center;
+    width: 224px;
+    height: 417px;
+    border: 1px solid var(--brown-light, #f8f1ea);
+
+    .in-stock {
+      text-transform: uppercase;
+      background-color: #f16a50;
+      padding: 4px 5.5px;
+      font-size: 10px;
+      width: 60px;
+      text-align: center;
+      color: #f8f1ea;
+    }
+
+    .sold {
+      text-transform: uppercase;
+      background-color: #f8f1ea;
+      padding: 4px 5.5px;
+      font-size: 10px;
+      width: 60px;
+      text-align: center;
+      color: #000;
+    }
+
+    h4 {
+      padding: 8px 10px 0 10px;
+      text-align: center;
+    }
+
+    h5 {
+      text-align: center;
+    }
+
+    img {
+      height: 300px;
+      width: 204px;
+      margin: 0 auto;
+      //   overflow: hidden;
+    }
+  }
+
+  .splide__arrow {
+    img {
+      height: auto;
+    }
+    border: none;
+    background-color: transparent;
+  }
+
+  .sold-border {
+    border: 1px solid var(--tomato-light, #f16a50);
+  }
+
+  .splide__arrow:hover img {
+    filter: brightness(0) saturate(100%) invert(53%) sepia(31%) saturate(1011%)
+      hue-rotate(322deg) brightness(93%) contrast(102%);
+  }
+
+  .sec2-btn {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 70px;
+    .arrivals-btn {
+      margin-top: 53px;
+      @extend %button-style;
+      border: 2px solid #000;
+      color: #000;
+    }
+
+    .arrivals-btn:hover {
+      @extend %button-hover-style;
+      color: #f8f1ea;
+    }
+  }
+}
+
+.third-sec {
+  background-color: #f8f1ea;
+  padding-top: 70px;
+  padding-bottom: 70px;
+
+  #slider3 {
+    margin-left: 40px;
+    margin-right: 40px;
+
+    .splide__pagination {
+      display: none;
+    }
+
+    .partner {
+      img {
+        margin: 0 auto;
+      }
+    }
+  }
+
+  .splide__arrow {
+    img {
+      height: auto;
+    }
+    border: none;
+    background-color: transparent;
+  }
+
+  .splide__arrow:hover img {
+    filter: brightness(0) saturate(100%) invert(53%) sepia(31%) saturate(1011%)
+      hue-rotate(322deg) brightness(93%) contrast(102%);
+  }
+}
+
+footer {
+  background-color: #35312d;
+  padding: 70px 132px 20px;
+
+  .footer-container {
+    display: flex;
+    justify-content: space-between;
+    .footer-nav {
+      nav {
+        margin-top: 35px;
+
+        a {
+          color: #f8f1ea;
+          font-size: 20px;
+        }
+
+        a:hover {
+          color: #f16a50;
+        }
+      }
+    }
+
+    .footer-contact {
+      display: flex;
+      flex-direction: column;
+      gap: 32px;
+
+      h3 {
+        margin-bottom: 16px;
+        font-size: 26px;
+        color: #f8f1ea;
+      }
+
+      .footer-icons {
+        display: flex;
+        gap: 5px;
+
+        .icon {
+          height: 30px;
+          width: 60px;
+          fill: #f8f1ea;
+        }
+
+        .icon:hover {
+          filter: invert(46%) sepia(94%) saturate(1584%) hue-rotate(332deg)
+            brightness(106%) contrast(89%);
+        }
+      }
+    }
+  }
+  p {
+    margin-top: 54px;
+    color: #f8f1ea;
+    text-align: center;
+    font-size: 14px;
+  }
+}
