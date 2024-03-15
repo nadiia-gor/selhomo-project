@@ -1,10 +1,12 @@
-import React from 'react';
+import React from "react";
 
-export function Logo() {
+const Logo = () => {
   return (
     <div className="logo-items">
-      <img src="../assets/images/logo.svg" alt="logo" />
+      <img src="src/assets/images/logo.svg" alt="logo" />
       <h2>SELHONO</h2>
     </div>
   );
-}
+};
+
+export default Logo;

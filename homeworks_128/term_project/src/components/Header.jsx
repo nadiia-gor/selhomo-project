@@ -1,7 +1,7 @@
-import React from 'react';
-import Logo from './Logo';
+import React from "react";
+import Logo from "./Logo";
 
-export function Header() {
+export const Header = () => {
   return (
     <header>
       <div className="header-container">
@@ -29,9 +29,11 @@ export function Header() {
               </li>
             </ul>
           </nav>
-          <img src="../assets/images/search-icon.svg" alt="search-icon" />
+          <img src="src/assets/images/search-icon.svg" alt="search-icon" />
         </div>
       </div>
     </header>
   );
-}
+};
+
+export default Header;

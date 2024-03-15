@@ -1,7 +1,7 @@
-import React from 'react';
-import Logo from './Logo';
+import React from "react";
+import Logo from "./Logo";
 
-export function Footer() {
+const Footer = () => {
   return (
     <footer>
       <div className="footer-container">
@@ -12,10 +12,10 @@ export function Footer() {
             lookings.
           </p>
           <div className="social-media">
-            <img src="../assets/images/icons/facebook.svg" alt="facebook" />
-            <img src="../assets/images/icons/twitter.svg" alt="twitter" />
-            <img src="../assets/images/icons/linkedin.svg" alt="linkedin" />
-            <img src="../assets/images/icons/instagram.svg" alt="instagram" />
+            <img src="src/assets/images/icons/facebook.svg" alt="facebook" />
+            <img src="src/assets/images/icons/twitter.svg" alt="twitter" />
+            <img src="src/assets/images/icons/linkedin.svg" alt="linkedin" />
+            <img src="src/assets/images/icons/instagram.svg" alt="instagram" />
           </div>
         </div>
         <div className="footer-nav-container">
@@ -52,4 +52,6 @@ export function Footer() {
       <p>Copyright © SELHONO</p>
     </footer>
   );
-}
+};
+
+export default Footer;
