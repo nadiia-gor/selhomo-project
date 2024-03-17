@@ -1,5 +1,6 @@
-import React from "react";
-import Logo from "./Logo";
+import React from 'react';
+import Logo from '../Logo';
+import './Footer.scss';
 
 const Footer = () => {
   return (
@@ -49,7 +50,7 @@ const Footer = () => {
           <p>(123) 456 - 7890</p>
         </div>
       </div>
-      <p>Copyright © SELHONO</p>
+      <p className="copy">Copyright © SELHONO</p>
     </footer>
   );
 };

@@ -1,0 +1,18 @@
+.nav-items {
+  display: flex;
+  gap: 30px;
+  align-items: center;
+}
+
+li {
+  list-style-type: none;
+}
+
+a {
+  cursor: pointer;
+}
+
+a:hover {
+  color: #c76904;
+  transition: 0.2 ease;
+}

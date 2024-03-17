@@ -1,0 +1,48 @@
+footer {
+  .copy {
+    margin: 138px auto 15px;
+    text-align: center;
+  }
+  .footer-container {
+    width: 63%;
+    margin: 0 auto;
+    display: flex;
+    gap: 100px;
+
+    .logo-social-info {
+      width: 32%;
+      display: flex;
+      flex-direction: column;
+      gap: 18px;
+
+      p {
+        margin: 0;
+      }
+      .social-media {
+        margin-top: 13px;
+        display: flex;
+        gap: 54px;
+        align-items: center;
+      }
+    }
+
+    .footer-nav-container {
+      width: 21%;
+      ul {
+        padding: 0;
+
+        li {
+          margin-top: 30px;
+        }
+      }
+
+      h4 {
+        margin: 0;
+      }
+
+      p {
+        margin-top: 30px;
+      }
+    }
+  }
+}

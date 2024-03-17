@@ -1,14 +1,23 @@
-import React from "react";
-import Logo from "./Logo";
+import React from 'react';
+import Logo from '../Logo';
+import styled from 'styled-components';
+import './Header.scss';
+
+const HeaderContainer = styled.div`
+  display: flex;
+  justify-content: space-between;
+  width: 63%;
+  margin: 0 auto;
+`;
 
 export const Header = () => {
   return (
     <header>
-      <div className="header-container">
+      <HeaderContainer>
         <Logo />
         <div className="nav-items">
           <nav>
-            <ul>
+            <ul style={{ display: 'flex', gap: '30px' }}>
               <li>
                 <a>Home</a>
               </li>
@@ -31,7 +40,7 @@ export const Header = () => {
           </nav>
           <img src="src/assets/images/search-icon.svg" alt="search-icon" />
         </div>
-      </div>
+      </HeaderContainer>
     </header>
   );
 };
