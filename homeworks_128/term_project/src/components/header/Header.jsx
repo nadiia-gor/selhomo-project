@@ -1,6 +1,7 @@
 import React from 'react';
-import Logo from '../Logo';
+import { Link } from 'react-router-dom';
 import styled from 'styled-components';
+import Logo from '../Logo';
 import './Header.scss';
 
 const HeaderContainer = styled.div`
@@ -19,22 +20,22 @@ export const Header = () => {
           <nav>
             <ul style={{ display: 'flex', gap: '30px' }}>
               <li>
-                <a>Home</a>
+                <Link to="/">Home</Link>
               </li>
               <li>
-                <a>Pages</a>
+                <Link to="/pages">Pages</Link>
               </li>
               <li>
-                <a>Services</a>
+                <Link to="/services">Services</Link>
               </li>
               <li>
-                <a>Project</a>
+                <Link to="/projects">Projects</Link>
               </li>
               <li>
-                <a>Blog</a>
+                <Link to="/blog">Blog</Link>
               </li>
               <li>
-                <a>Contact</a>
+                <Link to="/contact">Contact</Link>
               </li>
             </ul>
           </nav>
