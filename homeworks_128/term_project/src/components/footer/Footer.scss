@@ -1,24 +1,46 @@
+.fontstyle-jost {
+  color: #4d5053;
+  font-family: 'Jost Variable';
+  font-size: 22px;
+  font-style: normal;
+  font-weight: 400;
+}
+
+.fontstyle-dmserif {
+  color: #292f36;
+  font-family: 'DM Serif Display';
+  font-size: 25px;
+  font-style: normal;
+  font-weight: 400;
+}
+
 footer {
-  .copy {
-    margin: 138px auto 15px;
-    text-align: center;
-  }
-  .footer-container {
+  .footer--container {
     width: 63%;
-    margin: 0 auto;
+    margin: 30px auto 0 auto;
     display: flex;
     gap: 100px;
 
-    .logo-social-info {
+    //this same style h4 is reused three times below, makes sense to offload it here
+    h4 {
+      @extend .fontstyle-dmserif;
+      line-height: 125%;
+    }
+
+    .footer--logo-social-info {
       width: 32%;
       display: flex;
       flex-direction: column;
       gap: 18px;
 
-      p {
+      .footer--logo-desc {
+        @extend .fontstyle-jost;
         margin: 0;
+        line-height: 150%; /* 33px */
+        letter-spacing: 0.22px;
       }
-      .social-media {
+
+      .footer--social-media {
         margin-top: 13px;
         display: flex;
         gap: 54px;
@@ -26,13 +48,18 @@ footer {
       }
     }
 
-    .footer-nav-container {
+    .footer--nav-container {
       width: 21%;
+
       ul {
         padding: 0;
+        list-style-type: none;
 
         li {
+          @extend .fontstyle-jost;
           margin-top: 30px;
+          line-height: 300%;
+          letter-spacing: 0.22px;
         }
       }
 
@@ -41,8 +68,20 @@ footer {
       }
 
       p {
+        // wheelchair workaround, I don't care :)
+        padding-top: 14px;
+        @extend .fontstyle-jost;
+        line-height: 150%; /* 33px */
+        letter-spacing: 0.22px;
         margin-top: 30px;
       }
     }
+  }
+  .footer--copy {
+    @extend .fontstyle-jost;
+    line-height: 150%;
+    letter-spacing: 0.22px;
+    margin: 138px auto 15px;
+    text-align: center;
   }
 }
