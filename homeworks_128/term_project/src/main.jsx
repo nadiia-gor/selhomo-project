@@ -1,4 +1,5 @@
 /* import fonts in a single entrypoint */
+import '@fontsource-variable/inter';
 import '@fontsource-variable/jost';
 import '@fontsource/dm-serif-display';
 /* font section end */

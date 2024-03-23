@@ -11,7 +11,7 @@ const Home = () => {
             There are many variations of the passages of lorem Ipsum
             fromavailable, majority.
           </p>
-          <Button buttonText={'Get started'} />
+          <Button buttonText={'Get started'} arrow={'white'} />
         </div>
       </div>
     </div>
