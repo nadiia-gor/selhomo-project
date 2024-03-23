@@ -1,19 +1,4 @@
-.fontstyle-jost {
-  color: #4d5053;
-  font-family: 'Jost Variable';
-  font-size: 22px;
-  font-style: normal;
-  font-weight: 400;
-}
-
-.fontstyle-dmserif {
-  color: #292f36;
-  font-family: 'DM Serif Display';
-  font-size: 25px;
-  font-style: normal;
-  font-weight: 400;
-}
-
+@import '../../assets/styles/FontRoots.scss';
 footer {
   .footer--container {
     width: 63%;
@@ -36,8 +21,6 @@ footer {
       .footer--logo-desc {
         @extend .fontstyle-jost;
         margin: 0;
-        line-height: 150%; /* 33px */
-        letter-spacing: 0.22px;
       }
 
       .footer--social-media {
@@ -58,8 +41,6 @@ footer {
         li {
           @extend .fontstyle-jost;
           margin-top: 30px;
-          line-height: 150%;
-          letter-spacing: 0.22px;
         }
       }
 
@@ -69,16 +50,12 @@ footer {
 
       p {
         @extend .fontstyle-jost;
-        line-height: 150%; /* 33px */
-        letter-spacing: 0.22px;
         margin-top: 30px;
       }
     }
   }
   .footer--copy {
     @extend .fontstyle-jost;
-    line-height: 150%;
-    letter-spacing: 0.22px;
     margin: 138px auto 15px;
     text-align: center;
   }

@@ -1,6 +1,7 @@
 .home--container {
   width: 63%;
   margin: 150px auto 0;
+
   .home--title-banner-container {
     background-image: url('./images/title-banner-bg.jpg');
     background-size: cover;
@@ -33,5 +34,9 @@
         margin-bottom: 28px;
       }
     }
+  }
+  .home--read-more-snippets {
+    display: flex;
+    flex-direction: row;
   }
 }
