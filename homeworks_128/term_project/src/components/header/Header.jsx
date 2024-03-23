@@ -1,14 +1,14 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import styled from 'styled-components';
-import Logo from '../Logo';
+import Logo from '../Logo/Logo';
 import './Header.scss';
 
 const HeaderContainer = styled.div`
   display: flex;
   justify-content: space-between;
   width: 63%;
-  margin: 0 auto;
+  margin: 54px auto 0px auto;
 `;
 
 export const Header = () => {
@@ -16,7 +16,7 @@ export const Header = () => {
     <header>
       <HeaderContainer>
         <Logo />
-        <div className="nav-items">
+        <div className="header--nav-items">
           <nav>
             <ul style={{ display: 'flex', gap: '30px' }}>
               <li>

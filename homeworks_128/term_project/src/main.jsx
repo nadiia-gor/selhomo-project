@@ -1,3 +1,8 @@
+/* import fonts in a single entrypoint */
+import '@fontsource-variable/jost';
+import '@fontsource/dm-serif-display';
+/* font section end */
+
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import App from './App.jsx';

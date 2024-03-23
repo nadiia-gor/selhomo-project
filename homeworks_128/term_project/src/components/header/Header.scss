@@ -1,18 +1,25 @@
-.nav-items {
+.header--nav-items {
   display: flex;
   gap: 30px;
   align-items: center;
-}
 
-li {
-  list-style-type: none;
-}
+  li {
+    list-style-type: none;
+  }
 
-a {
-  cursor: pointer;
-}
+  // The <Link> component is really just an <a> with a className. But we don't have any
+  // other links, so let's just style the <a> component
+  a {
+    color: #292f36;
+    font-family: 'Jost Variable';
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 125%;
+    text-decoration: none;
 
-a:hover {
-  color: #c76904;
-  transition: 0.2 ease;
+    &:hover {
+      color: #c76904;
+    }
+  }
 }
