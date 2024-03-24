@@ -1,16 +1,16 @@
 import styled from 'styled-components';
-import './Button.scss';
 
 const StyledButton = styled.button`
   display: inline-flex;
-  align-items: flex-end;
+  gap: 10px;
   color: #fff;
   border: 1px solid
     ${(props) => (props.buttonColor ? props.buttonColor : '#cda274')};
   border-radius: 18px;
   background: ${(props) => (props.buttonColor ? props.buttonColor : '#cda274')};
   box-shadow: 0px 10px 20px 0px rgba(192, 192, 192, 0.35);
-  padding: 26px 49px 26px 48px;
+  padding: ${(props) =>
+    props.buttonPadding ? props.buttonPadding : '26px 49px 26px 48px'};
   text-align: center;
   font-family: 'Inter Variable';
   font-size: 18px;
@@ -20,9 +20,13 @@ const StyledButton = styled.button`
   cursor: pointer;
 `;
 
-const Button = ({ buttonText, buttonColor, arrow }) => {
+const Button = ({ buttonText, buttonColor, arrow, buttonPadding }) => {
   return (
-    <StyledButton type="button" buttonColor={buttonColor}>
+    <StyledButton
+      type="button"
+      buttonColor={buttonColor}
+      buttonPadding={buttonPadding}
+    >
       {buttonText}
       {arrow === 'black' ? (
         <img src="src\assets\images\icons\arrow-right.svg" />
