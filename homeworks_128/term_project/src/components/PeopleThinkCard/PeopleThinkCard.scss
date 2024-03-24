@@ -1,4 +1,33 @@
 .peopleThinkCard--container {
+  width: 33%;
+  padding: 54px 30px;
+  background: #fff;
+  border-radius: 30px;
   display: flex;
   flex-direction: column;
+
+  .person--container {
+    display: flex;
+    gap: 23px;
+    align-items: center;
+    img {
+      border-radius: 50%;
+    }
+
+    .person-info--container {
+      * {
+        margin: 0;
+      }
+
+      h4 {
+        font-family: 'DM Serif Display';
+        font-size: 25px;
+      }
+
+      p {
+        font-family: 'Inter Variable';
+        font-size: 15px;
+      }
+    }
+  }
 }
