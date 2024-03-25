@@ -13,11 +13,16 @@
     "@fontsource-variable/inter": "^5.0.17",
     "@fontsource-variable/jost": "^5.0.18",
     "@fontsource/dm-serif-display": "^5.0.19",
+    "formik": "^2.4.5",
+    "leaflet": "^1.9.4",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
+    "react-leaflet": "^4.2.1",
     "react-router-dom": "^6.22.3",
     "sass": "^1.72.0",
-    "styled-components": "^6.1.8"
+    "styled-components": "^6.1.8",
+    "yup": "^1.4.0",
+    "yup-phone-lite": "^2.0.1"
   },
   "devDependencies": {
     "@types/react": "^18.2.56",
