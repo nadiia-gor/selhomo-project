@@ -220,4 +220,35 @@
     flex-wrap: nowrap;
     margin-bottom: 120px;
   }
+  .home--contact-banner--container {
+    // this is a hack to get a full width child in a limited-width parent
+    // needs overflow-x: hidden, see App.css
+    width: 100vw;
+    position: relative;
+    left: 50%;
+    right: 50%;
+    margin-left: -50vw;
+    margin-right: -50vw;
+
+    height: 430px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-image: url('src/pages/Home/images/contact-banner-bg.png');
+    object-fit: cover;
+
+    & > h2 {
+      @extend .fontstyle-dmserif;
+      color: #fff;
+      font-size: 50px;
+      line-height: 125%;
+      margin-bottom: 0;
+    }
+    & > p {
+      @extend .fontstyle-jost;
+      color: #fff;
+      font-weight: 500;
+    }
+  }
 }

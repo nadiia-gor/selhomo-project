@@ -213,6 +213,11 @@ const Home = () => {
           />
         ))}
       </div>
+      <div className="home--contact-banner--container">
+        <h2>Wanna join the interno?</h2>
+        <p>It is a long established fact will be distracted</p>
+        <Button buttonText={'Contact us'} />
+      </div>
     </div>
   );
 };
