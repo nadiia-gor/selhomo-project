@@ -1,0 +1,89 @@
+@import 'src/assets/styles/FontRoots.scss';
+
+.contact--container {
+  width: 63%;
+  margin: 0 auto;
+  & > h1 {
+    @extend .fontstyle-dmserif;
+    text-align: center;
+    font-size: 50px;
+    letter-spacing: 0.5px;
+  }
+  .contact--infos--form {
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    gap: 152px;
+
+    .contact--infos {
+      display: flex;
+      flex-direction: column;
+      gap: 45px;
+      .contact--infos--item {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        & > img {
+          height: 52px;
+          width: 52px;
+        }
+        & > p {
+          @extend .fontstyle-jost;
+          font-size: 20px;
+        }
+      }
+      .contact--infos--icons {
+        display: flex;
+        flex-direction: row;
+        gap: 35px;
+        margin-left: 15px;
+      }
+    }
+    .contact--form {
+      & > form {
+        flex: 0 0 1;
+        display: flex;
+        flex-direction: column;
+        align-items: start;
+      }
+      .contact--form--field-container,
+      textarea {
+        margin-bottom: 50px;
+      }
+      .contact--form--field-pair {
+        display: flex;
+        flex-direction: row;
+        gap: 39px;
+      }
+      input,
+      textarea {
+        @extend .fontstyle-jost;
+        width: 378px;
+        appearance: none;
+        border-top: none;
+        border-right: none;
+        border-left: none;
+        border-bottom: 1px solid black;
+        outline: none;
+        padding-bottom: 13px;
+        &::placeholder {
+          @extend .fontstyle-jost;
+          margin-bottom: 13px;
+        }
+        & ~ div {
+          @extend .fontstyle-jost;
+          font-size: 14px;
+          color: #f44336;
+        }
+      }
+      textarea {
+        resize: none;
+        // TODO: this hardcoded width needs to go
+        width: 797px;
+        height: 150px;
+        margin-bottom: 0;
+      }
+    }
+  }
+}

@@ -20,12 +20,19 @@ const StyledButton = styled.button`
   cursor: pointer;
 `;
 
-const Button = ({ buttonText, buttonColor, arrow, buttonPadding }) => {
+const Button = ({
+  buttonText,
+  buttonColor,
+  arrow,
+  buttonPadding,
+  ...props
+}) => {
   return (
     <StyledButton
       type="button"
       buttonColor={buttonColor}
       buttonPadding={buttonPadding}
+      {...props}
     >
       {buttonText}
       {arrow === 'black' ? (
