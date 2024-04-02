@@ -10,7 +10,7 @@ const PeopleThinkCard = ({ avatar, personName, description, info }) => {
           <p className="peopleThinkCard--descr">{description}</p>
         </div>
       </div>
-      <p>{info}</p>
+      <p className="person--opinion">{info}</p>
     </div>
   );
 };
