@@ -1,0 +1,41 @@
+@import 'src/assets/styles/FontRoots.scss';
+
+.textalign-left {
+  text-align: left;
+}
+
+.textalign-right {
+  text-align: right;
+}
+
+.leafcard--flex-row {
+  display: flex;
+  flex-direction: row;
+}
+
+.leafcard--flex-row-rtl {
+  @extend .leafcard--flex-row;
+  flex-direction: row-reverse;
+}
+
+.leafcard--container {
+  gap: 93px;
+
+  .leafcard--content {
+    .leafcard--content--number {
+      @extend .fontstyle-dmserif;
+      color: #c76904;
+      font-size: 90px;
+      letter-spacing: 0.9px;
+      margin-top: 0;
+    }
+    .leafcard--content--text--header {
+      @extend .fontstyle-dmserif;
+      font-size: 35px;
+      line-height: 125%;
+    }
+    .leafcard--content--text--desc {
+      @extend .fontstyle-jost;
+    }
+  }
+}

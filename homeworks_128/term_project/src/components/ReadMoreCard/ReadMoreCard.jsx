@@ -1,9 +1,12 @@
 import './ReadMoreCard.scss';
 
-const ReadMoreCard = ({ headerText, bodyText }) => {
+const ReadMoreCard = ({ headerText, bodyText, className }) => {
   return (
-    <div className="readMoreCard--container">
-      <h4 className="readMoreCard--header" style={{ textAlign: 'center' }}>
+    <div className={`readMoreCard--container ${className}`}>
+      <h4
+        className="readMoreCard--header"
+        style={{ textAlign: 'center', marginTop: 0 }}
+      >
         {headerText}
       </h4>
       <p className="readMoreCard--body" style={{ textAlign: 'center' }}>

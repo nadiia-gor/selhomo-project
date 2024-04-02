@@ -1,0 +1,54 @@
+@import 'src/assets/styles/FontRoots.scss';
+
+.services--container {
+  width: 63%;
+  margin: 0 auto;
+
+  .services--read-more-block {
+    margin-top: 114px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    gap: 0px 0px;
+    grid-template-areas:
+      '. . .'
+      '. . .';
+
+    .services--read-more-card {
+      padding: 83px 20px;
+      border-radius: 30px;
+      &:hover {
+        h4,
+        a,
+        p {
+          color: #c76904;
+        }
+        img {
+          filter: brightness(0) saturate(100%) invert(39%) sepia(88%)
+            saturate(919%) hue-rotate(5deg) brightness(94%) contrast(97%);
+        }
+        background-color: #f9f9f9;
+      }
+    }
+  }
+  .services--our-workflow {
+    .services--our-workflow--header {
+      text-align: center;
+      h2 {
+        @extend .fontstyle-dmserif;
+        font-size: 50px;
+        line-height: 125%;
+      }
+      p {
+        @extend .fontstyle-jost;
+      }
+      margin-bottom: 156px;
+    }
+    .services--our-workflow--cards {
+      display: flex;
+      flex-direction: column;
+      gap: 120px;
+    }
+    margin-bottom: 378px;
+  }
+}

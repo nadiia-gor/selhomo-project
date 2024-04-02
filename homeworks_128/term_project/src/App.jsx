@@ -6,7 +6,7 @@ import Contact from './pages/Contact/Contact';
 import Home from './pages/Home/Home';
 import Layout from './pages/Layout';
 import Projects from './pages/Projects';
-import Services from './pages/Services';
+import Services from './pages/Services/Services';
 
 const router = createBrowserRouter([
   {
