@@ -1,0 +1,23 @@
+@import 'src/assets/styles/FontRoots.scss';
+
+.flex-row {
+  display: flex;
+  gap: 40px;
+}
+
+.flex-row-rtl {
+  @extend .flex-row;
+  flex-direction: row-reverse;
+}
+
+.big-image-card--container {
+  .big-image-card--text-container--header {
+    @extend .fontstyle-dmserif;
+    letter-spacing: 1px;
+    font-size: 50px;
+  }
+  .big-image-card--text-container--desc {
+    @extend .fontstyle-jost;
+    margin-bottom: 40px;
+  }
+}
