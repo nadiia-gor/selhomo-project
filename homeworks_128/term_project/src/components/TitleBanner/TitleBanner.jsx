@@ -1,10 +1,11 @@
+import './TitleBanner.scss';
+
 const TitleBanner = ({ backgroundImage, titleText }) => {
   return (
     <div
+      className="title-banner"
       style={{
         backgroundImage: `url(${backgroundImage})`,
-        textAlign: 'center',
-        height: '356px',
       }}
     >
       <h2>{titleText}</h2>

@@ -3,7 +3,7 @@ import { MapContainer, Marker, Popup, TileLayer } from 'react-leaflet';
 import * as Yup from 'yup';
 import 'yup-phone-lite';
 import Button from '../../components/Button/Button';
-import TitleBanner from '../../components/TitleBanner';
+import TitleBanner from '../../components/TitleBanner/TitleBanner';
 import './Contact.scss';
 
 const validationSchema = Yup.object().shape({
