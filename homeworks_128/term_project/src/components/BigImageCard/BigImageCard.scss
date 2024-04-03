@@ -14,10 +14,29 @@
   .big-image-card--text-container--header {
     @extend .fontstyle-dmserif;
     letter-spacing: 1px;
-    font-size: 50px;
+    font-size: clamp(2rem, 3.5vw, 4rem);
+    margin-top: 0;
+    margin-bottom: 23px;
   }
   .big-image-card--text-container--desc {
     @extend .fontstyle-jost;
+    margin-top: 0;
     margin-bottom: 40px;
+  }
+  .big-image-card--image {
+    width: 100%;
+    max-width: 718px;
+    max-height: 500px;
+    object-fit: cover;
+  }
+}
+
+@media screen and (max-width: 1150px) {
+  .flex-row {
+    flex-wrap: wrap;
+  }
+
+  .flex-row-rtl {
+    flex-wrap: wrap;
   }
 }

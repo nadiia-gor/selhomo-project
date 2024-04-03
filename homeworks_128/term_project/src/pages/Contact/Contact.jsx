@@ -126,24 +126,30 @@ const Contact = () => {
             </Formik>
           </div>
         </div>
-        <MapContainer
-          center={[52.231853437451996, 21.006003323983016]}
-          zoom={15}
-          scrollWheelZoom={false}
-          style={{
-            width: '80%',
-            height: '400px',
-            margin: '50px auto 50px auto',
-          }}
+        <div
+          className="contact--map-container"
+          style={{ borderRadius: '50px' }}
         >
-          <TileLayer
-            attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
-            url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
-          />
-          <Marker position={[52.231853437451996, 21.006003323983016]}>
-            <Popup>We are here :)</Popup>
-          </Marker>
-        </MapContainer>
+          <MapContainer
+            center={[52.231853437451996, 21.006003323983016]}
+            zoom={15}
+            scrollWheelZoom={false}
+            style={{
+              width: '80%',
+              height: '400px',
+              margin: '50px auto 50px auto',
+              'border-radius': '50px',
+            }}
+          >
+            <TileLayer
+              attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+              url="https://tiles.stadiamaps.com/tiles/alidade_smooth_dark/{z}/{x}/{y}{r}.png"
+            />
+            <Marker position={[52.231853437451996, 21.006003323983016]}>
+              <Popup>We are here :)</Popup>
+            </Marker>
+          </MapContainer>
+        </div>
       </div>
     </>
   );

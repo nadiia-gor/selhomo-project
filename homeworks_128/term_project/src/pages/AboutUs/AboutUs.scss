@@ -5,7 +5,7 @@
   margin: 150px auto 0;
 
   .aboutus--quote {
-    width: 751px;
+    width: 80%;
     flex-shrink: 0;
 
     margin: 0 auto;
@@ -16,12 +16,12 @@
     h2 {
       @extend .fontstyle-dmserif;
       letter-spacing: 0.7px;
-      font-size: 35px;
+      font-size: clamp(0.75rem, 2.4vw, 3rem);
       text-align: center;
     }
     h3 {
       @extend .fontstyle-jost;
-      font-size: 25px;
+      font-size: clamp(0.75rem, 1.75vw, 2rem);
       letter-spacing: 0.25px;
       text-align: center;
     }
@@ -56,6 +56,8 @@
   }
   .aboutus--contactform--container {
     margin-top: 296px;
+    display: flex;
+    flex-direction: column;
     h2 {
       @extend .fontstyle-dmserif;
       letter-spacing: 1px;
@@ -70,26 +72,30 @@
     margin-top: 100px;
     margin-bottom: 380px;
     & > form {
-      flex: 0 0 1;
       display: flex;
+      flex: 0 0 1;
       flex-direction: column;
-      align-items: start;
+      box-sizing: border-box;
     }
     .contact--form--field-container {
       margin-bottom: 0px;
+      width: 100%;
+
+      input {
+        width: 100%;
+      }
     }
     .contact--form--field--message > input {
-      width: 1210px;
+      width: 100%;
       margin-top: 200px;
     }
     .contact--form--field-pair {
       display: flex;
       flex-direction: row;
-      gap: 266px;
+      gap: 21%;
     }
     input {
       @extend .fontstyle-jost;
-      width: 472px;
       appearance: none;
       border-top: none;
       border-right: none;
@@ -107,5 +113,11 @@
         color: #f44336;
       }
     }
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .aboutus--what-people-thinks-cards--container {
+    flex-wrap: wrap;
   }
 }
