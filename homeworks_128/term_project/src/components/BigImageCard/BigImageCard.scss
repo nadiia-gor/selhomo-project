@@ -11,6 +11,11 @@
 }
 
 .big-image-card--container {
+  @media screen and (max-width: 1150px) {
+    border: 5px solid #d8a876;
+    border-radius: 70px;
+    padding: 88px 29.5px;
+  }
   .big-image-card--text-container--header {
     @extend .fontstyle-dmserif;
     letter-spacing: 1px;
@@ -27,7 +32,7 @@
     width: 100%;
     max-width: 718px;
     max-height: 500px;
-    object-fit: cover;
+    object-fit: contain;
   }
 }
 

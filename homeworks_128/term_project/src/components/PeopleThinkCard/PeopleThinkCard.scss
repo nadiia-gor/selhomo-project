@@ -2,6 +2,9 @@
 
 .peopleThinkCard--container {
   width: 33%;
+  @media screen and (max-width: 1360px) {
+    width: unset;
+  }
   padding: 54px 30px;
   background: #fff;
   border-radius: 30px;

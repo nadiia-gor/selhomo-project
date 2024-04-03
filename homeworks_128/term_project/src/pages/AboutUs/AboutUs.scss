@@ -2,6 +2,9 @@
 
 .aboutus--container {
   width: 63%;
+  @media screen and (max-width: 768px) {
+    width: 80%;
+  }
   margin: 150px auto 0;
 
   .aboutus--quote {
@@ -16,12 +19,12 @@
     h2 {
       @extend .fontstyle-dmserif;
       letter-spacing: 0.7px;
-      font-size: clamp(0.75rem, 2.4vw, 3rem);
+      font-size: clamp(1rem, 3vw, 3rem);
       text-align: center;
     }
     h3 {
       @extend .fontstyle-jost;
-      font-size: clamp(0.75rem, 1.75vw, 2rem);
+      font-size: clamp(1rem, 1.75vw, 2rem);
       letter-spacing: 0.25px;
       text-align: center;
     }
@@ -52,6 +55,10 @@
       display: flex;
       gap: 20px;
       margin-top: 38px;
+      @media screen and (max-width: 1360px) {
+        flex-wrap: wrap;
+        flex-direction: column;
+      }
     }
   }
   .aboutus--contactform--container {
@@ -113,11 +120,5 @@
         color: #f44336;
       }
     }
-  }
-}
-
-@media screen and (max-width: 768px) {
-  .aboutus--what-people-thinks-cards--container {
-    flex-wrap: wrap;
   }
 }
