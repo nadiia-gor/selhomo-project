@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom';
 import Button from '../../components/Button/Button';
 import NewsCard from '../../components/NewsCard/NewsCard';
 import PeopleThinkCard from '../../components/PeopleThinkCard/PeopleThinkCard';
@@ -104,8 +105,7 @@ const Home = () => {
         ))}
       </div>
       <div className="home--we-create-art--container">
-        <img src="src\pages\Home\images\we-create-art-1.png" alt="art1" />
-        <img src="src\pages\Home\images\we-create-art-2.png" alt="art2" />
+        <img src="src\pages\Home\images\we-create-art.png" alt="art" />
         <div className="home--we-create-art-info--container">
           <h2>We create art for modern life</h2>
           <p>
@@ -119,11 +119,13 @@ const Home = () => {
               <p>Call Us Anytime</p>
             </div>
           </div>
-          <Button
-            buttonText={'Get Free Estimate'}
-            arrow={'white'}
-            buttonPadding={'26px 31px'}
-          />
+          <Link to="/contact">
+            <Button
+              buttonText={'Get Free Estimate'}
+              arrow={'white'}
+              buttonPadding={'26px 31px'}
+            />
+          </Link>
         </div>
       </div>
       <div className="home--what-people-thinks--container">

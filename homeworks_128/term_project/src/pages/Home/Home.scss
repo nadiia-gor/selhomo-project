@@ -38,6 +38,7 @@
     }
   }
   .home--read-more-snippets {
+    margin-top: 95px;
     display: flex;
     flex-direction: row;
     gap: 40px;
@@ -47,19 +48,10 @@
     margin-top: 150px;
     display: flex;
     position: relative;
-    width: 67%;
+    width: 100%;
     margin-bottom: 190px;
-
     & > img {
-      width: 87%;
-      height: 700px;
-      z-index: -1;
-    }
-
-    & > img:nth-of-type(2) {
-      position: absolute;
-      top: 0;
-      left: 62%;
+      width: 100%;
     }
 
     .home--we-create-art-info--container {
