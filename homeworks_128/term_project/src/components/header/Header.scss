@@ -3,23 +3,81 @@
   gap: 30px;
   align-items: center;
 
-  li {
-    list-style-type: none;
+  .header--nav {
+    ul {
+      display: flex;
+      gap: 30px;
+      @media screen and (max-width: 768px) {
+        display: none;
+      }
+      li {
+        list-style-type: none;
+
+        // The <Link> component is really just an <a> with a className. But we don't have any
+        // other links, so let's just style the <a> component
+        a {
+          color: #292f36;
+          font-family: 'Jost Variable';
+          font-size: 20px;
+          font-style: normal;
+          font-weight: 500;
+          line-height: 125%;
+          text-decoration: none;
+
+          &:hover {
+            color: #c76904;
+          }
+        }
+      }
+    }
   }
+}
 
-  // The <Link> component is really just an <a> with a className. But we don't have any
-  // other links, so let's just style the <a> component
-  a {
-    color: #292f36;
-    font-family: 'Jost Variable';
-    font-size: 20px;
-    font-style: normal;
-    font-weight: 500;
-    line-height: 125%;
-    text-decoration: none;
+.burger-menu {
+  display: block;
+}
 
-    &:hover {
-      color: #c76904;
+@media screen and (min-width: 769px) {
+  .burger-menu {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .header--nav-items {
+    width: 100%;
+
+    img {
+      display: none;
+    }
+  }
+  .header--nav {
+    display: none;
+  }
+  .header--nav.open {
+    display: block;
+    ul {
+      display: flex;
+      padding: 0;
+      position: fixed;
+      top: 100px;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      z-index: 10;
+      flex-direction: column;
+      padding-top: 9%;
+      align-items: center;
+      height: 100vh;
+      width: 100%;
+      background-color: #fff;
+      transition: left 1s;
+
+      li {
+        a {
+          font-size: 1.75rem;
+        }
+      }
     }
   }
 }

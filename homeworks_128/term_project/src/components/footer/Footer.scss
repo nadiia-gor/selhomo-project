@@ -60,3 +60,16 @@ footer {
     text-align: center;
   }
 }
+
+@media screen and (max-width: 768px) {
+  footer {
+    .footer--container {
+      gap: 15px;
+      margin-left: 10%;
+      margin-right: 10%;
+      .footer--logo-social-info {
+        width: 100%;
+      }
+    }
+  }
+}
