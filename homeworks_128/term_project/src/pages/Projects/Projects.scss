@@ -1,0 +1,61 @@
+@import 'src/assets/styles/FontRoots.scss';
+
+.projects--gallery {
+  width: 63%;
+  margin: 0 auto;
+  &-selector {
+    display: flex;
+    justify-content: space-between;
+    border: 1px solid #cda274;
+    border-radius: 18px;
+    margin-top: 37px;
+  }
+
+  &--button {
+    @extend .fontstyle-jost;
+    padding: 26px 66px;
+    border-radius: 18px;
+    &--active {
+      background: #cda274;
+    }
+  }
+  &--grid {
+    display: grid;
+    margin-top: 38px;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    gap: 38px 50px;
+    grid-template-areas:
+      '. .'
+      '. .'
+      '. .';
+  }
+
+  &--pagination {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    justify-content: center;
+    margin-top: 112px;
+    margin-bottom: 235px;
+    &--item {
+      @extend .fontstyle-jost;
+      font-size: 16px;
+      text-transform: capitalize;
+      font-weight: 500;
+      display: flex;
+      width: 52px;
+      height: 52px;
+      &:not(:last-child) {
+        border: 1px solid #cda274;
+      }
+      border-radius: 26px;
+      justify-content: center;
+      align-items: center;
+      &:hover {
+        border: none;
+        background-color: #f4f0ec;
+      }
+    }
+  }
+}
