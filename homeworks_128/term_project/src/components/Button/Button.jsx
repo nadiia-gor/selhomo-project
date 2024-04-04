@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import './Button.scss';
 
 const StyledButton = styled.button`
   display: inline-flex;
