@@ -50,5 +50,8 @@
       gap: 120px;
     }
     margin-bottom: 378px;
+    @media screen and (max-width: 768px) {
+      margin-bottom: 100px;
+    }
   }
 }

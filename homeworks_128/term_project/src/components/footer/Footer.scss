@@ -28,6 +28,11 @@ footer {
         display: flex;
         gap: 54px;
         align-items: center;
+        img:hover {
+          filter: invert(75%) sepia(24%) saturate(698%) hue-rotate(348deg)
+            brightness(92%) contrast(82%);
+          cursor: pointer;
+        }
       }
     }
 

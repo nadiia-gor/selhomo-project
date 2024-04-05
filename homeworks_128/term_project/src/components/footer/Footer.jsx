@@ -1,4 +1,3 @@
-import React from 'react';
 import Logo from '../Logo/Logo';
 import './Footer.scss';
 
@@ -13,10 +12,21 @@ const Footer = () => {
             lookings.
           </p>
           <div className="footer--social-media">
-            <img src="src/assets/images/icons/facebook.svg" alt="facebook" />
-            <img src="src/assets/images/icons/twitter.svg" alt="twitter" />
-            <img src="src/assets/images/icons/linkedin.svg" alt="linkedin" />
-            <img src="src/assets/images/icons/instagram.svg" alt="instagram" />
+            <a href="https://facebook.com">
+              <img src="src/assets/images/icons/facebook.svg" alt="facebook" />
+            </a>
+            <a href="https://twitter.com">
+              <img src="src/assets/images/icons/twitter.svg" alt="twitter" />
+            </a>
+            <a href="https://linkedin.com">
+              <img src="src/assets/images/icons/linkedin.svg" alt="linkedin" />
+            </a>
+            <a href="https://instagram.com">
+              <img
+                src="src/assets/images/icons/instagram.svg"
+                alt="instagram"
+              />
+            </a>
           </div>
         </div>
         <div className="footer--nav-container">
