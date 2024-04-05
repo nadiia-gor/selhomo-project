@@ -1,0 +1,78 @@
+@import 'src/assets/styles/FontRoots.scss';
+
+.blog {
+  width: 63%;
+  margin: 0 auto;
+
+  &--search {
+    width: 70%;
+    margin-top: 50px;
+    margin-right: auto;
+    margin-left: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 33px;
+    border-radius: 20px;
+    background-color: #f4f0ec;
+    input {
+      appearance: none;
+      border: none;
+      outline: none;
+      background-color: #f4f0ec;
+      &::placeholder {
+        @extend .fontstyle-jost;
+        color: #cda274;
+      }
+    }
+  }
+  h2 {
+    @extend .fontstyle-dmserif;
+    font-size: 50px;
+    letter-spacing: 1px;
+    line-height: 125%;
+  }
+  &--latest {
+    margin-bottom: 140px;
+    &--card {
+      display: flex;
+      flex-direction: row;
+      gap: 70px;
+
+      & > img {
+        max-height: 100%;
+      }
+      &--text {
+        display: flex;
+        flex-direction: column;
+        & > h4 {
+          @extend .fontstyle-dmserif;
+          margin-top: 0;
+        }
+        & > p {
+          @extend .fontstyle-jost;
+        }
+      }
+      &--footer {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        &--date {
+          @extend .fontstyle-jost;
+          font-size: 16px;
+          letter-spacing: 0.16px;
+          text-transform: capitalize;
+        }
+      }
+    }
+  }
+  &--articles {
+    margin-bottom: 190px;
+    &--cards {
+      display: flex;
+      flex-direction: row;
+      gap: 70px;
+    }
+  }
+}
