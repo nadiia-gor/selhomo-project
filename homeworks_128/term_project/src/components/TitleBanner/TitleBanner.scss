@@ -5,7 +5,8 @@
   height: 356px;
   position: relative;
   margin-top: 66px;
-  object-fit: contain;
+  background-size: cover;
+  background-repeat: no-repeat;
 
   h2 {
     @extend .fontstyle-dmserif;

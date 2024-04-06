@@ -1,5 +1,7 @@
 import { ErrorMessage, Field, Form, Formik } from 'formik';
 import { MapContainer, Marker, Popup, TileLayer } from 'react-leaflet';
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 import * as Yup from 'yup';
 import 'yup-phone-lite';
 import Button from '../../components/Button/Button';
@@ -25,6 +27,7 @@ const Contact = () => {
       <TitleBanner
         backgroundImage={'src/pages/Contact/images/title-banner-bg.png'}
       />
+      <ToastContainer />
       <div className="contact--container">
         <h1>We love meeting new people and helping them</h1>
         <div className="contact--infos--form">
@@ -60,8 +63,12 @@ const Contact = () => {
                 message: '',
               }}
               validationSchema={validationSchema}
-              onSubmit={(values) => {
+              onSubmit={(values, actions) => {
                 console.log(values);
+                toast.success(
+                  "Thank you for contacting us, we'll get back to you!"
+                );
+                actions.resetForm();
               }}
             >
               <Form>
@@ -116,6 +123,7 @@ const Contact = () => {
                 <Button
                   buttonText={'Send now'}
                   buttonColor={'#292F36'}
+                  isSubmitType={true}
                   style={{
                     marginTop: '30px',
                     marginLeft: 'auto',

@@ -26,11 +26,12 @@ const Button = ({
   buttonColor,
   arrow,
   buttonPadding,
+  isSubmitType,
   ...props
 }) => {
   return (
     <StyledButton
-      type="button"
+      type={isSubmitType ? 'submit' : 'button'}
       buttonColor={buttonColor}
       buttonPadding={buttonPadding}
       {...props}
