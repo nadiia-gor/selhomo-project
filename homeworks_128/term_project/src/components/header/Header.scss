@@ -1,3 +1,14 @@
+.header--container {
+  display: flex;
+  justify-content: space-between;
+  width: 63%;
+  margin: 54px auto 0px auto;
+  @media screen and (max-width: 1300px) {
+    margin: 54px auto 0px auto;
+    gap: 0;
+  }
+}
+
 .header--nav-items {
   display: flex;
   gap: 30px;
@@ -7,7 +18,7 @@
     ul {
       display: flex;
       gap: 30px;
-      @media screen and (max-width: 768px) {
+      @media screen and (max-width: 1071px) {
         display: none;
       }
       li {
@@ -35,15 +46,12 @@
 
 .burger-menu {
   display: block;
-}
-
-@media screen and (min-width: 769px) {
-  .burger-menu {
+  @media screen and (min-width: 1072px) {
     display: none;
   }
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 1071px) {
   .header--nav-items {
     width: 100%;
 

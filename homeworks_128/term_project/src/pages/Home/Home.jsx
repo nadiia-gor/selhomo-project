@@ -105,7 +105,6 @@ const Home = () => {
         ))}
       </div>
       <div className="home--we-create-art--container">
-        <img src="src\pages\Home\images\we-create-art.png" alt="art" />
         <div className="home--we-create-art-info--container">
           <h2>We create art for modern life</h2>
           <p>
@@ -113,7 +112,7 @@ const Home = () => {
             available, majority.
           </p>
           <div className="home--call-info--container">
-            <img src="src\pages\Home\images\call-icon.svg" alt="call-icon" />
+            <img src="src/pages/Home/images/call-icon.svg" alt="call-icon" />
             <div className="home--phone-number">
               <p>012345678</p>
               <p>Call Us Anytime</p>

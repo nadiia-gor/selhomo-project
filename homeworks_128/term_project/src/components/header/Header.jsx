@@ -1,20 +1,8 @@
 import HamburgerMenu from 'hamburger-react';
 import { useState } from 'react';
 import { Link } from 'react-router-dom';
-import styled from 'styled-components';
 import Logo from '../Logo/Logo';
 import './Header.scss';
-
-const HeaderContainer = styled.div`
-  display: flex;
-  justify-content: space-between;
-  width: 63%;
-  margin: 54px auto 0px auto;
-  @media screen and (max-width: 768px) {
-    margin: 54px auto 0px 10%;
-    gap: 30%;
-  }
-`;
 
 export const Header = () => {
   const [isOpen, setOpen] = useState(false);
@@ -25,7 +13,7 @@ export const Header = () => {
 
   return (
     <header>
-      <HeaderContainer>
+      <div className="header--container">
         <Logo />
         <div className={`header--nav-items ${isOpen ? 'open' : ''}`}>
           <nav className={`header--nav ${isOpen ? 'open' : ''}`}>
@@ -59,7 +47,7 @@ export const Header = () => {
             direction="left"
           />
         </div>
-      </HeaderContainer>
+      </div>
     </header>
   );
 };
