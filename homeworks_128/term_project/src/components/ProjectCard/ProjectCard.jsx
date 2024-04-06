@@ -9,7 +9,9 @@ const ProjectCard = ({ projectPhoto }) => {
           <h4>Modern Bedroom</h4>
           <p>Decor / Architecture</p>
         </div>
-        <img src="src/pages/Home/images/arrow.svg" alt="arrow-icon" />
+        <button type="button" className="project-arrow-btn">
+          <img src="src/pages/Home/images/arrow.svg" alt="arrow-icon" />
+        </button>
       </div>
     </div>
   );

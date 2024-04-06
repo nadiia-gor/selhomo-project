@@ -88,9 +88,31 @@
     display: flex;
     justify-content: space-between;
 
-    & > img {
+    & > button {
       width: 52px;
       height: 52px;
+      background-color: #d8a876;
+      border-radius: 50%;
+      border: none;
+      padding-top: 5px;
+    }
+
+    button:hover {
+      cursor: pointer;
+      img {
+        @keyframes move-right {
+          0% {
+            transform: translateX(0);
+          }
+          50% {
+            transform: translateX(10px);
+          }
+          100% {
+            transform: translateX(0px);
+          }
+        }
+        animation: move-right 1s ease-in-out;
+      }
     }
 
     p {

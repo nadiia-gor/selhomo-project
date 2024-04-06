@@ -10,12 +10,14 @@ const BigImageProjectCard = ({ image, header, desc }) => {
           <div className="bipc--text-container--header">{header}</div>
           <div className="bipc--text-container--desc">{desc}</div>
         </div>
-        <div className="bipc--arrow">
+        <button type="button">
           <img
-            src="src/components/BigImageProjectCard/icons/arrow.svg"
-            alt=""
+            width="25"
+            height="25"
+            src="https://img.icons8.com/ios/50/1A1A1A/forward--v1.png"
+            alt="forward--v1"
           />
-        </div>
+        </button>
       </div>
     </div>
   );

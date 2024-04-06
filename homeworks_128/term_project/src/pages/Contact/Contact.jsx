@@ -35,15 +35,15 @@ const Contact = () => {
             <div className="contact--infos--items">
               <div className="contact--infos--item">
                 <img src="src/pages/Contact/images/icons/mail.svg" />
-                <p>info@selhono.com</p>
+                <a href="https://gmail.com">info@selhono.com</a>
               </div>
               <div className="contact--infos--item">
                 <img src="src/pages/Contact/images/icons/phone.svg" />
-                <p>+1 (378) 400-1234</p>
+                <a href="tel:13784001234">+1 (378) 400-1234</a>
               </div>
               <div className="contact--infos--item">
                 <img src="src/pages/Contact/images/icons/web.svg" />
-                <p>www.selhono.com</p>
+                <a href="#">www.selhono.com</a>
               </div>
             </div>
             <div className="contact--infos--icons">

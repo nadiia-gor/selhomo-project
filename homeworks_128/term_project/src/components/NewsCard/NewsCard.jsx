@@ -8,7 +8,9 @@ const NewsCard = ({ newsPhoto, newsTitle, newsDate, newsCategory }) => {
       <h4>{newsTitle}</h4>
       <div className="date-arrow--container">
         <p>{newsDate}</p>
-        <img src="src/pages/Home/images/arrow.svg" alt="arrow" />
+        <button type="button">
+          <img src="src/pages/Home/images/arrow.svg" alt="arrow" />
+        </button>
       </div>
     </div>
   );

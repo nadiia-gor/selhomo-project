@@ -13,6 +13,32 @@
     justify-content: space-between;
     margin-top: 10px;
 
+    .project-arrow-btn {
+      width: 70px;
+      height: 70px;
+      background-color: #d8a876;
+      border-radius: 50%;
+      border: none;
+    }
+
+    .project-arrow-btn:hover {
+      cursor: pointer;
+      img {
+        @keyframes move-right {
+          0% {
+            transform: translateX(0);
+          }
+          50% {
+            transform: translateX(10px);
+          }
+          100% {
+            transform: translateX(0px);
+          }
+        }
+        animation: move-right 1s ease-in-out;
+      }
+    }
+
     .project-descr {
       display: flex;
       flex-direction: column;
