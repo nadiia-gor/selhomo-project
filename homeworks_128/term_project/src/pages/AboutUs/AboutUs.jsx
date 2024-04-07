@@ -111,18 +111,13 @@ const AboutUs = () => {
               <Form>
                 <div className="contact--form--field-pair">
                   <div className="contact--form--field-container">
-                    <Field name="name" placeholder="Name" novalidate />
+                    <Field name="name" placeholder="Name" />
                     <div>
                       <ErrorMessage name="name" />
                     </div>
                   </div>
                   <div className="contact--form--field-container">
-                    <Field
-                      name="email"
-                      type="email"
-                      placeholder="Email"
-                      novalidate
-                    />
+                    <Field name="email" type="email" placeholder="Email" />
                     <div>
                       <ErrorMessage name="email" />
                     </div>

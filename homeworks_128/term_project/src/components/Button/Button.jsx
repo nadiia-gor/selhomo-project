@@ -6,12 +6,13 @@ const StyledButton = styled.button`
   gap: 10px;
   color: #fff;
   border: 1px solid
-    ${(props) => (props.buttonColor ? props.buttonColor : '#cda274')};
+    ${(props) => (props.$buttonColor ? props.$buttonColor : '#cda274')};
   border-radius: 18px;
-  background: ${(props) => (props.buttonColor ? props.buttonColor : '#cda274')};
+  background: ${(props) =>
+    props.$buttonColor ? props.$buttonColor : '#cda274'};
   box-shadow: 0px 10px 20px 0px rgba(192, 192, 192, 0.35);
   padding: ${(props) =>
-    props.buttonPadding ? props.buttonPadding : '26px 49px 26px 48px'};
+    props.$buttonPadding ? props.$buttonPadding : '26px 49px 26px 48px'};
   text-align: center;
   font-family: 'Inter Variable';
   font-size: 18px;
@@ -33,7 +34,7 @@ const Button = ({
     <StyledButton
       type={isSubmitType ? 'submit' : 'button'}
       $buttonColor={buttonColor}
-      buttonPadding={buttonPadding}
+      $buttonPadding={buttonPadding}
       {...props}
     >
       {buttonText}
