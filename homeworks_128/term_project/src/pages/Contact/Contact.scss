@@ -58,10 +58,9 @@
     }
     .contact--form {
       & > form {
-        flex: 0 0 1;
         display: flex;
         flex-direction: column;
-        align-items: start;
+        align-items: center;
       }
       &--field-container,
       textarea {
@@ -82,7 +81,10 @@
       input,
       textarea {
         @extend .fontstyle-jost;
-        width: min(80vw, 378px);
+        width: 378px;
+        @media screen and (max-width: 1110px) {
+          width: 80vw;
+        }
         appearance: none;
         border-top: none;
         border-right: none;
@@ -103,7 +105,7 @@
       &--field-textarea {
         width: 797px;
         @media screen and (max-width: 1110px) {
-          width: min(80vw, 378px);
+          width: 80vw;
         }
       }
       textarea {
@@ -117,7 +119,7 @@
         margin-left: auto;
         margin-right: 0;
         @media screen and (max-width: 1110px) {
-          margin-left: 0;
+          margin-left: auto;
           margin-right: auto;
         }
       }
