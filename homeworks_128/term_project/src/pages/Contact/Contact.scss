@@ -2,6 +2,9 @@
 
 .contact--container {
   width: 63%;
+  @media screen and (max-width: 768px) {
+    width: 90%;
+  }
   margin: 0 auto;
   & > h1 {
     @extend .fontstyle-dmserif;
@@ -15,7 +18,7 @@
     flex-direction: row;
     gap: 152px;
     @media screen and (max-width: 1180px) {
-      flex-direction: column;
+      flex-direction: column-reverse;
     }
 
     .contact--infos {
@@ -59,26 +62,27 @@
         display: flex;
         flex-direction: column;
         align-items: start;
-        // @media screen and (max-width: 1110px) {
-        //   width: 100%;
-        // }
       }
-      .contact--form--field-container,
+      &--field-container,
       textarea {
         margin-bottom: 50px;
+        @media screen and (max-width: 1110px) {
+          margin-bottom: 10px;
+        }
       }
-      .contact--form--field-pair {
+      &--field-pair {
         display: flex;
         flex-direction: row;
         gap: 39px;
         @media screen and (max-width: 1110px) {
           flex-direction: column;
+          gap: 0px;
         }
       }
       input,
       textarea {
         @extend .fontstyle-jost;
-        width: 378px;
+        width: min(80vw, 378px);
         appearance: none;
         border-top: none;
         border-right: none;
@@ -96,14 +100,25 @@
           color: #f44336;
         }
       }
+      &--field-textarea {
+        width: 797px;
+        @media screen and (max-width: 1110px) {
+          width: min(80vw, 378px);
+        }
+      }
       textarea {
         resize: none;
-        // TODO: this hardcoded width needs to go
-        width: 797px;
         height: 150px;
         margin-bottom: 0;
+        width: 100%;
+      }
+      &--button {
+        margin-top: 30px;
+        margin-left: auto;
+        margin-right: 0;
         @media screen and (max-width: 1110px) {
-          width: 100%;
+          margin-left: 0;
+          margin-right: auto;
         }
       }
     }

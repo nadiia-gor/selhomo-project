@@ -74,18 +74,13 @@ const Contact = () => {
               <Form>
                 <div className="contact--form--field-pair">
                   <div className="contact--form--field-container">
-                    <Field name="name" placeholder="Name" novalidate />
+                    <Field name="name" placeholder="Name" />
                     <div>
                       <ErrorMessage name="name" />
                     </div>
                   </div>
                   <div className="contact--form--field-container">
-                    <Field
-                      name="email"
-                      type="email"
-                      placeholder="Email"
-                      novalidate
-                    />
+                    <Field name="email" type="email" placeholder="Email" />
                     <div>
                       <ErrorMessage name="email" />
                     </div>
@@ -93,18 +88,13 @@ const Contact = () => {
                 </div>
                 <div className="contact--form--field-pair">
                   <div className="contact--form--field-container">
-                    <Field name="subject" placeholder="Subject" novalidate />
+                    <Field name="subject" placeholder="Subject" />
                     <div>
                       <ErrorMessage name="subject" />
                     </div>
                   </div>
                   <div className="contact--form--field-container">
-                    <Field
-                      name="phone"
-                      type="tel"
-                      placeholder="Phone"
-                      novalidate
-                    />
+                    <Field name="phone" type="tel" placeholder="Phone" />
                     <div>
                       <ErrorMessage name="phone" />
                     </div>
@@ -121,14 +111,10 @@ const Contact = () => {
                   </div>
                 </div>
                 <Button
+                  className="contact--form--button"
                   buttonText={'Send now'}
                   buttonColor={'#292F36'}
                   isSubmitType={true}
-                  style={{
-                    marginTop: '30px',
-                    marginLeft: 'auto',
-                    marginRight: '0',
-                  }}
                 />
               </Form>
             </Formik>
@@ -136,7 +122,7 @@ const Contact = () => {
         </div>
         <div
           className="contact--map-container"
-          style={{ borderRadius: '50px' }}
+          style={{ borderRadius: '10px' }}
         >
           <MapContainer
             center={[52.231853437451996, 21.006003323983016]}
@@ -146,7 +132,7 @@ const Contact = () => {
               width: '80%',
               height: '400px',
               margin: '50px auto 50px auto',
-              'border-radius': '50px',
+              borderRadius: '15px',
             }}
           >
             <TileLayer

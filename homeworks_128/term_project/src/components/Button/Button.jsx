@@ -32,7 +32,7 @@ const Button = ({
   return (
     <StyledButton
       type={isSubmitType ? 'submit' : 'button'}
-      buttonColor={buttonColor}
+      $buttonColor={buttonColor}
       buttonPadding={buttonPadding}
       {...props}
     >
