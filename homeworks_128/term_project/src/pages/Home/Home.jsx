@@ -123,6 +123,7 @@ const Home = () => {
               buttonText={'Get Free Estimate'}
               arrow={'white'}
               buttonPadding={'26px 31px'}
+              scrollToTop={true}
             />
           </Link>
         </div>

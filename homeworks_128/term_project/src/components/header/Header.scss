@@ -1,3 +1,14 @@
+header {
+  position: fixed;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  background: #fff;
+  width: 100%;
+  // needed because of leaflet
+  z-index: 1001;
+}
+
 .header--container {
   display: flex;
   justify-content: space-between;

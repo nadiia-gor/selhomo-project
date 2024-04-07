@@ -14,7 +14,11 @@ const NotFound = () => {
           <h1>404</h1>
           <h2>We are sorry, but the page you requested was not found</h2>
           <Link to="/">
-            <Button buttonText={'Back to Home'} buttonColor={'#292F36'} />
+            <Button
+              buttonText={'Back to Home'}
+              buttonColor={'#292F36'}
+              scrollToTop={true}
+            />
           </Link>
         </div>
       </div>

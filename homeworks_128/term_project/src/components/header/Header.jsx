@@ -15,7 +15,10 @@ export const Header = () => {
     <header>
       <div className="header--container">
         <Logo />
-        <div className={`header--nav-items ${isOpen ? 'open' : ''}`}>
+        <div
+          className={`header--nav-items ${isOpen ? 'open' : ''}`}
+          onClick={() => setOpen(false)}
+        >
           <nav className={`header--nav ${isOpen ? 'open' : ''}`}>
             <ul>
               <li>
