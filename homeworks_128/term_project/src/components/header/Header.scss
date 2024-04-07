@@ -1,7 +1,7 @@
 .header--container {
   display: flex;
   justify-content: space-between;
-  width: 63%;
+  width: min(80vw, 1210px);
   margin: 54px auto 0px auto;
   @media screen and (max-width: 1300px) {
     margin: 54px auto 0px auto;

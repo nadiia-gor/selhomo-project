@@ -1,7 +1,7 @@
 @import '../../assets/styles/FontRoots.scss';
 footer {
   .footer--container {
-    width: 63%;
+    width: min(80vw, 1210px);
     margin: 30px auto 0 auto;
     display: flex;
     gap: 100px;
@@ -66,7 +66,7 @@ footer {
   }
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 1110px) {
   footer {
     .footer--container {
       flex-direction: column;

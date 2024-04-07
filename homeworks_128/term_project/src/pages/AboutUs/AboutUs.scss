@@ -1,7 +1,7 @@
 @import '/src/assets/styles/FontRoots.scss';
 
 .aboutus--container {
-  width: 63%;
+  width: min(80vw, 1210px);
   @media screen and (max-width: 768px) {
     width: 80%;
   }

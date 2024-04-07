@@ -1,7 +1,7 @@
 @import 'src/assets/styles/FontRoots.scss';
 
 .projects--gallery {
-  width: 63%;
+  width: min(80vw, 1210px);
   margin: 0 auto;
   &-selector {
     display: flex;
@@ -9,12 +9,16 @@
     border: 1px solid #cda274;
     border-radius: 18px;
     margin-top: 37px;
+    @media screen and (max-width: 1120px) {
+      flex-direction: column;
+    }
   }
 
   &--button {
     @extend .fontstyle-jost;
     padding: 26px 66px;
     border-radius: 18px;
+    text-align: center;
     &--active {
       background: #cda274;
     }
