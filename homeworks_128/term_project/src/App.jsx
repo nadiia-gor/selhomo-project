@@ -5,6 +5,7 @@ import Blog from './pages/Blog/Blog';
 import Contact from './pages/Contact/Contact';
 import Home from './pages/Home/Home';
 import Layout from './pages/Layout';
+import NotFound from './pages/NotFound/NotFound';
 import Projects from './pages/Projects/Projects';
 import Services from './pages/Services/Services';
 
@@ -13,6 +14,7 @@ const router = createBrowserRouter([
     path: '/',
     element: <Layout />,
     children: [
+      { path: '*', element: <NotFound /> },
       { path: '/', element: <Home /> },
       { path: 'about', element: <AboutUs /> },
       { path: 'services', element: <Services /> },

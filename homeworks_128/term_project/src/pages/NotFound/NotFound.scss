@@ -1,0 +1,37 @@
+@import 'src/assets/styles/FontRoots.scss';
+
+.notfound {
+  width: min(80vw, 1210px);
+  margin: 200px auto 200px auto;
+  display: flex;
+  flex-direction: row;
+  @media screen and (max-width: 1110px) {
+    flex-direction: column;
+  }
+  & > img {
+    @media screen and (max-width: 1110px) {
+      display: none;
+    }
+    object-fit: contain;
+    max-width: 100%;
+    width: min(40vw, 738px);
+  }
+  &--text {
+    margin-left: 20px;
+    h1 {
+      @extend .fontstyle-dmserif;
+      font-size: 250px;
+      font-style: normal;
+      color: #cda274;
+
+      margin-top: 0;
+      margin-bottom: 0;
+    }
+    h2 {
+      @extend .fontstyle-dmserif;
+      font-size: 35px;
+      line-height: 150%;
+      letter-spacing: 0.35px;
+    }
+  }
+}
