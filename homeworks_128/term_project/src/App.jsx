@@ -6,6 +6,7 @@ import Contact from './pages/Contact/Contact';
 import Home from './pages/Home/Home';
 import Layout from './pages/Layout';
 import NotFound from './pages/NotFound/NotFound';
+import Pricing from './pages/Pricing/Pricing';
 import Projects from './pages/Projects/Projects';
 import Services from './pages/Services/Services';
 
@@ -21,6 +22,7 @@ const router = createBrowserRouter([
       { path: 'projects', element: <Projects /> },
       { path: 'blog', element: <Blog /> },
       { path: 'contact', element: <Contact /> },
+      { path: 'pricing', element: <Pricing /> },
     ],
   },
 ]);

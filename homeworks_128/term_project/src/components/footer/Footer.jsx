@@ -34,19 +34,19 @@ const Footer = () => {
           <h4>Pages</h4>
           <nav>
             <ul>
-              <Link to="/about">
+              <Link to="/about" onClick={() => window.scrollTo(0, 0)}>
                 <li>About Us</li>
               </Link>
-              <Link to="/projects">
+              <Link to="/projects" onClick={() => window.scrollTo(0, 0)}>
                 <li>Our Projects</li>
               </Link>
-              <Link to="/">
+              <Link to="/" onClick={() => window.scrollTo(0, 0)}>
                 <li>Our Team</li>
               </Link>
-              <Link to="/contact">
+              <Link to="/contact" onClick={() => window.scrollTo(0, 0)}>
                 <li>Contact Us</li>
               </Link>
-              <Link to="/services">
+              <Link to="/services" onClick={() => window.scrollTo(0, 0)}>
                 <li>Services</li>
               </Link>
             </ul>

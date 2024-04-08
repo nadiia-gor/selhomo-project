@@ -28,7 +28,6 @@ const Button = ({
   arrow,
   buttonPadding,
   isSubmitType,
-  scrollToTop,
   ...props
 }) => {
   return (
@@ -37,7 +36,6 @@ const Button = ({
       $buttonColor={buttonColor}
       $buttonPadding={buttonPadding}
       {...props}
-      onClick={() => (scrollToTop ? window.scrollTo(0, 0) : null)}
     >
       {buttonText}
       {arrow === 'black' ? (

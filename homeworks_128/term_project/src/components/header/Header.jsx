@@ -22,22 +22,34 @@ export const Header = () => {
           <nav className={`header--nav ${isOpen ? 'open' : ''}`}>
             <ul>
               <li>
-                <Link to="/">Home</Link>
+                <Link to="/" onClick={() => window.scrollTo(0, 0)}>
+                  Home
+                </Link>
               </li>
               <li>
-                <Link to="/services">Services</Link>
+                <Link to="/services" onClick={() => window.scrollTo(0, 0)}>
+                  Services
+                </Link>
               </li>
               <li>
-                <Link to="/projects">Projects</Link>
+                <Link to="/projects" onClick={() => window.scrollTo(0, 0)}>
+                  Projects
+                </Link>
               </li>
               <li>
-                <Link to="/blog">Blog</Link>
+                <Link to="/blog" onClick={() => window.scrollTo(0, 0)}>
+                  Blog
+                </Link>
               </li>
               <li>
-                <Link to="/contact">Contact</Link>
+                <Link to="/contact" onClick={() => window.scrollTo(0, 0)}>
+                  Contact
+                </Link>
               </li>
               <li>
-                <Link to="/about">About us</Link>
+                <Link to="/about" onClick={() => window.scrollTo(0, 0)}>
+                  About us
+                </Link>
               </li>
             </ul>
           </nav>

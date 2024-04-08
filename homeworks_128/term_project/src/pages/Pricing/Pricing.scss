@@ -1,0 +1,76 @@
+@import 'src/assets/styles/FontRoots.scss';
+
+.hide-chip {
+  visibility: hidden;
+}
+
+.pricing {
+  width: min(80vw, 1210px);
+  margin: 150px auto 139px;
+  @media screen and (max-width: 1200px) {
+    width: 80%;
+  }
+  display: flex;
+  flex-direction: row;
+  @media screen and (max-width: 1110px) {
+    flex-direction: column;
+    gap: 40px;
+  }
+  justify-content: space-around;
+  &--card {
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: center;
+    @media screen and (max-width: 1110px) {
+      border: 2px solid #cda274;
+      border-radius: 15px;
+    }
+    h3 {
+      @extend .fontstyle-dmserif;
+    }
+    &--price {
+      p {
+        @extend .fontstyle-dmserif;
+        margin: 0;
+        span {
+          font-size: 85px;
+        }
+      }
+      &:nth-of-type(2) {
+        span {
+          color: '#CDA274';
+        }
+      }
+    }
+    &--list {
+      @extend .fontstyle-jost;
+      display: flex;
+      justify-content: space-around;
+      flex-direction: column;
+      align-items: center;
+      p {
+        margin-bottom: 0;
+      }
+      margin-bottom: 28px;
+    }
+    &--chip {
+      @extend .fontstyle-jost;
+      display: inline-flex;
+      justify-content: center;
+      align-items: center;
+      margin-top: 22px;
+      font-size: 18px;
+      font-weight: 600;
+      padding: 10px 38px;
+      border-radius: 18px;
+      background: #cda274;
+      color: #fff;
+    }
+    button {
+      @media screen and (max-width: 1110px) {
+        margin-bottom: 20px;
+      }
+    }
+  }
+}

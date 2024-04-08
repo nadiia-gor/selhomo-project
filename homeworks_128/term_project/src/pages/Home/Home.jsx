@@ -92,7 +92,13 @@ const Home = () => {
             There are many variations of the passages of lorem Ipsum
             fromavailable, majority.
           </p>
-          <Button buttonText={'Get started'} arrow={'white'} />
+          <Link to="/contact" onClick={() => window.scrollTo(0, 0)}>
+            <Button
+              buttonText={'Get started'}
+              arrow={'white'}
+              scrollToTop={true}
+            />
+          </Link>
         </div>
       </div>
       <div className="home--read-more-snippets">
@@ -118,12 +124,11 @@ const Home = () => {
               <p>Call Us Anytime</p>
             </div>
           </div>
-          <Link to="/contact">
+          <Link to="/contact" onClick={() => window.scrollTo(0, 0)}>
             <Button
               buttonText={'Get Free Estimate'}
               arrow={'white'}
               buttonPadding={'26px 31px'}
-              scrollToTop={true}
             />
           </Link>
         </div>

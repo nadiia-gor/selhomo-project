@@ -13,12 +13,8 @@ const NotFound = () => {
         <div className="notfound--text">
           <h1>404</h1>
           <h2>We are sorry, but the page you requested was not found</h2>
-          <Link to="/">
-            <Button
-              buttonText={'Back to Home'}
-              buttonColor={'#292F36'}
-              scrollToTop={true}
-            />
+          <Link to="/" onClick={() => window.scrollTo(0, 0)}>
+            <Button buttonText={'Back to Home'} buttonColor={'#292F36'} />
           </Link>
         </div>
       </div>

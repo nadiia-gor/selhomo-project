@@ -14,7 +14,7 @@ const ReadMoreCard = ({ headerText, bodyText, className }) => {
         {bodyText}
       </p>
       <span className="readMoreCard--button-wrapper">
-        <Link to="/projects">
+        <Link to="/pricing" onClick={() => window.scrollTo(0, 0)}>
           <a className="readMoreCard--button--text">Read More</a>
         </Link>
         <img
