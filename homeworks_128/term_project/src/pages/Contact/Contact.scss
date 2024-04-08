@@ -50,6 +50,11 @@
         flex-direction: row;
         gap: 35px;
         margin-left: 15px;
+        img:hover {
+          filter: invert(75%) sepia(24%) saturate(698%) hue-rotate(348deg)
+            brightness(92%) contrast(82%);
+          cursor: pointer;
+        }
         @media screen and (max-width: 1180px) {
           justify-content: center;
           margin: 0;

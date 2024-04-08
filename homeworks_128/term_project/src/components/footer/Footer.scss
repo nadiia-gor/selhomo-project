@@ -47,6 +47,15 @@ footer {
           @extend .fontstyle-jost;
           margin-top: 30px;
         }
+
+        li:hover {
+          text-decoration: underline;
+          color: #d8a876;
+          cursor: pointer;
+        }
+        a {
+          text-decoration: none;
+        }
       }
 
       h4 {

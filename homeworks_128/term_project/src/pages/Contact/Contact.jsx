@@ -47,10 +47,27 @@ const Contact = () => {
               </div>
             </div>
             <div className="contact--infos--icons">
-              <img src="src\assets\images\icons\facebook.svg" />
-              <img src="src\assets\images\icons\twitter.svg" />
-              <img src="src\assets\images\icons\linkedin.svg" />
-              <img src="src\assets\images\icons\instagram.svg" />
+              <a href="https://facebook.com">
+                <img
+                  src="src/assets/images/icons/facebook.svg"
+                  alt="facebook"
+                />
+              </a>
+              <a href="https://twitter.com">
+                <img src="src/assets/images/icons/twitter.svg" alt="twitter" />
+              </a>
+              <a href="https://linkedin.com">
+                <img
+                  src="src/assets/images/icons/linkedin.svg"
+                  alt="linkedin"
+                />
+              </a>
+              <a href="https://instagram.com">
+                <img
+                  src="src/assets/images/icons/instagram.svg"
+                  alt="instagram"
+                />
+              </a>
             </div>
           </div>
           <div className="contact--form">

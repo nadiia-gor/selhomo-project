@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom';
 import Logo from '../Logo/Logo';
 import './Footer.scss';
 
@@ -33,11 +34,21 @@ const Footer = () => {
           <h4>Pages</h4>
           <nav>
             <ul>
-              <li>About Us</li>
-              <li>Our Projects</li>
-              <li>Our Team</li>
-              <li>Contact Us</li>
-              <li>Services</li>
+              <Link to="/about">
+                <li>About Us</li>
+              </Link>
+              <Link to="/projects">
+                <li>Our Projects</li>
+              </Link>
+              <Link to="/">
+                <li>Our Team</li>
+              </Link>
+              <Link to="/contact">
+                <li>Contact Us</li>
+              </Link>
+              <Link to="/services">
+                <li>Services</li>
+              </Link>
             </ul>
           </nav>
         </div>

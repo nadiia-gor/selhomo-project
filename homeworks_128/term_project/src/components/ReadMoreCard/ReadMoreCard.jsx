@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom';
 import './ReadMoreCard.scss';
 
 const ReadMoreCard = ({ headerText, bodyText, className }) => {
@@ -13,7 +14,9 @@ const ReadMoreCard = ({ headerText, bodyText, className }) => {
         {bodyText}
       </p>
       <span className="readMoreCard--button-wrapper">
-        <a className="readMoreCard--button--text">Read More</a>
+        <Link to="/projects">
+          <a className="readMoreCard--button--text">Read More</a>
+        </Link>
         <img
           className="readMoreCard--button--arrow"
           src="src\assets\images\icons\arrow-right.svg"
