@@ -7,7 +7,9 @@ const Footer = () => {
     <footer>
       <div className="footer--container">
         <div className="footer--logo-social-info">
-          <Logo />
+          <Link to="/">
+            <Logo />
+          </Link>
           <p className="footer--logo-desc">
             It is a long established fact that a reader will be distracted
             lookings.
@@ -59,8 +61,12 @@ const Footer = () => {
               <li>Kitchen</li>
               <li>Living Area</li>
               <li>Bathroom</li>
-              <li>Dining Hall</li>
-              <li>Bedroom</li>
+              <Link to="/projects" onClick={() => window.scrollTo(0, 0)}>
+                <li>Bedroom</li>
+              </Link>
+              <Link to="/pricing" onClick={() => window.scrollTo(0, 0)}>
+                <li>Pricing</li>
+              </Link>
             </ul>
           </nav>
         </div>

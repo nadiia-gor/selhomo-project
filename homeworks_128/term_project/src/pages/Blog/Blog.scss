@@ -20,6 +20,7 @@
       border: none;
       outline: none;
       background-color: #f4f0ec;
+      height: 20px;
       &::placeholder {
         @extend .fontstyle-jost;
         color: #cda274;
@@ -73,6 +74,14 @@
         flex-direction: row;
         justify-content: space-between;
         align-items: center;
+        button {
+          border: none;
+          width: 70px;
+          height: 70px;
+          border-radius: 50%;
+          cursor: pointer;
+        }
+
         &--date {
           @extend .fontstyle-jost;
           font-size: 16px;

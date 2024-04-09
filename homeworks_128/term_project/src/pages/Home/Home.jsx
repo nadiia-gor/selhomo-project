@@ -1,6 +1,7 @@
 import { Link } from 'react-router-dom';
 import Button from '../../components/Button/Button';
 import NewsCard from '../../components/NewsCard/NewsCard';
+import PartnersSlider from '../../components/PartnersSlider/PartnersSlider';
 import PeopleThinkCard from '../../components/PeopleThinkCard/PeopleThinkCard';
 import ProjectCard from '../../components/ProjectCard/ProjectCard';
 import ReadMoreCard from '../../components/ReadMoreCard/ReadMoreCard';
@@ -56,7 +57,7 @@ const newsCardContents = [
   {
     newsPhoto: 'src/pages/Home/images/news-photo2.png',
     newsCategory: 'Living Design',
-    newsTitle: 'Low Cost Latest Invented Interior Creative Designing Ideas',
+    newsTitle: 'Low Cost Latest Invented Interior Designing Ideas',
     newsDate: '22 November, 2023',
   },
   {
@@ -147,7 +148,7 @@ const Home = () => {
           ))}
         </div>
       </div>
-      <div className="home-partners--container">
+      {/* <div className="home-partners--container">
         <img
           src="src/pages/Home/images/brand-icons/buffer.svg"
           alt="buffer-partner"
@@ -161,7 +162,8 @@ const Home = () => {
           alt="cion-partner"
         />
         <img src="src/pages/Home/images/brand-icons/frame.svg" alt="partner" />
-      </div>
+      </div> */}
+      <PartnersSlider />
       <div className="home--follow-our-projects--container">
         <h3>Follow Our Projects</h3>
         <p>

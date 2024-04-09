@@ -121,9 +121,7 @@
     background: #d8a876;
     border-radius: 70px;
     padding: 88px 29.5px;
-    @media screen and (max-width: 768px) {
-      width: 100%;
-    }
+
     h3 {
       color: #fff;
       text-align: center;
@@ -170,6 +168,7 @@
       margin: 0;
     }
     h3 {
+      margin-top: 200px;
       font-family: 'DM Serif Display';
       font-size: 60px;
       font-weight: 400;

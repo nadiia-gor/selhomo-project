@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom';
 import './BigImageProjectCard.scss';
 
 const BigImageProjectCard = ({ image, header, desc }) => {
@@ -10,14 +11,16 @@ const BigImageProjectCard = ({ image, header, desc }) => {
           <div className="bipc--text-container--header">{header}</div>
           <div className="bipc--text-container--desc">{desc}</div>
         </div>
-        <button type="button">
-          <img
-            width="25"
-            height="25"
-            src="https://img.icons8.com/ios/50/1A1A1A/forward--v1.png"
-            alt="forward--v1"
-          />
-        </button>
+        <Link to="/pricing" onClick={() => window.scrollTo(0, 0)}>
+          <button type="button">
+            <img
+              width="25"
+              height="25"
+              src="https://img.icons8.com/ios/50/1A1A1A/forward--v1.png"
+              alt="forward--v1"
+            />
+          </button>
+        </Link>
       </div>
     </div>
   );

@@ -40,7 +40,14 @@ const Blog = () => {
                 <div className="blog--latest--card--footer--date">
                   {cardText.date}
                 </div>
-                <img src="src/pages/Blog/images/arrow.svg" alt="" />
+                <button type="button">
+                  <img
+                    width="25"
+                    height="25"
+                    src="https://img.icons8.com/ios/50/1A1A1A/forward--v1.png"
+                    alt="forward--v1"
+                  />
+                </button>
               </div>
             </div>
           </div>

@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom';
 import './ProjectCard.scss';
 
 const ProjectCard = ({ projectPhoto }) => {
@@ -9,9 +10,11 @@ const ProjectCard = ({ projectPhoto }) => {
           <h4>Modern Bedroom</h4>
           <p>Decor / Architecture</p>
         </div>
-        <button type="button" className="project-arrow-btn">
-          <img src="src/pages/Home/images/arrow.svg" alt="arrow-icon" />
-        </button>
+        <Link to="/projects" onClick={() => window.scrollTo(0, 0)}>
+          <button type="button" className="project-arrow-btn">
+            <img src="src/pages/Home/images/arrow.svg" alt="arrow-icon" />
+          </button>
+        </Link>
       </div>
     </div>
   );

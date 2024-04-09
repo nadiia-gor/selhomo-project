@@ -18,6 +18,10 @@ footer {
       flex-direction: column;
       gap: 18px;
 
+      a {
+        text-decoration: none;
+      }
+
       .footer--logo-desc {
         @extend .fontstyle-jost;
         margin: 0;

@@ -13,10 +13,15 @@ header {
   display: flex;
   justify-content: space-between;
   width: min(80vw, 1210px);
+  padding-bottom: 20px;
   margin: 54px auto 0px auto;
   @media screen and (max-width: 1300px) {
     margin: 54px auto 0px auto;
     gap: 0;
+  }
+
+  a {
+    text-decoration: none;
   }
 }
 
@@ -65,10 +70,6 @@ header {
 @media screen and (max-width: 1071px) {
   .header--nav-items {
     width: 100%;
-
-    img {
-      display: none;
-    }
   }
   .header--nav {
     display: none;

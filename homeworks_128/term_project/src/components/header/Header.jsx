@@ -14,7 +14,9 @@ export const Header = () => {
   return (
     <header>
       <div className="header--container">
-        <Logo />
+        <Link to="/">
+          <Logo />
+        </Link>
         <div
           className={`header--nav-items ${isOpen ? 'open' : ''}`}
           onClick={() => setOpen(false)}
@@ -53,7 +55,6 @@ export const Header = () => {
               </li>
             </ul>
           </nav>
-          <img src="src/assets/images/search-icon.svg" alt="search-icon" />
         </div>
         <div className="burger-menu">
           <HamburgerMenu

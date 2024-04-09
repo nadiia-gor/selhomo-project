@@ -16,50 +16,58 @@
 
   &--button {
     @extend .fontstyle-jost;
+    font-size: 3.5rem;
     padding: 26px 66px;
     border-radius: 18px;
     text-align: center;
+    text-transform: uppercase;
+    margin-top: 50px;
     &--active {
       background: #cda274;
     }
   }
   &--grid {
+    margin-bottom: 120px;
     display: grid;
     margin-top: 38px;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: 1fr 1fr 1fr;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(3, 1fr);
     gap: 38px 50px;
-    grid-template-areas:
-      '. .'
-      '. .'
-      '. .';
-  }
-
-  &--pagination {
-    display: flex;
-    flex-direction: row;
-    gap: 20px;
-    justify-content: center;
-    margin-top: 112px;
-    margin-bottom: 235px;
-    &--item {
-      @extend .fontstyle-jost;
-      font-size: 16px;
-      text-transform: capitalize;
-      font-weight: 500;
-      display: flex;
-      width: 52px;
-      height: 52px;
-      &:not(:last-child) {
-        border: 1px solid #cda274;
-      }
-      border-radius: 26px;
-      justify-content: center;
-      align-items: center;
-      &:hover {
-        border: none;
-        background-color: #f4f0ec;
-      }
+    // grid-template-areas:
+    //   '. .'
+    //   '. .'
+    //   '. .';
+    @media screen and (max-width: 768px) {
+      grid-template-columns: 1fr;
+      grid-template-rows: repeat(6, 1fr);
     }
   }
+
+  // &--pagination {
+  //   display: flex;
+  //   flex-direction: row;
+  //   gap: 20px;
+  //   justify-content: center;
+  //   margin-top: 112px;
+  //   margin-bottom: 235px;
+  //   &--item {
+  //     @extend .fontstyle-jost;
+  //     font-size: 16px;
+  //     text-transform: capitalize;
+  //     font-weight: 500;
+  //     display: flex;
+  //     width: 52px;
+  //     height: 52px;
+  //     &:not(:last-child) {
+  //       border: 1px solid #cda274;
+  //     }
+  //     border-radius: 26px;
+  //     justify-content: center;
+  //     align-items: center;
+  //     &:hover {
+  //       border: none;
+  //       background-color: #f4f0ec;
+  //     }
+  //   }
+  // }
 }

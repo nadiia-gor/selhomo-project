@@ -36,13 +36,8 @@ const Projects = () => {
         backgroundImage={'src/pages/Projects/images/titlebanner.png'}
       />
       <div className="projects--gallery">
-        <div className="projects--gallery-selector">
-          <div className="projects--gallery--button">Bathroom</div>
-          <div className="projects--gallery--button projects--gallery--button--active">
-            Bedroom
-          </div>
-          <div className="projects--gallery--button">Kitchen</div>
-          <div className="projects--gallery--button">Living Room</div>
+        <div className="projects--gallery--button projects--gallery--button--active">
+          Bedroom
         </div>
         <div className="projects--gallery--grid">
           {galleryItems.map((item) => (
@@ -54,14 +49,14 @@ const Projects = () => {
             />
           ))}
         </div>
-        <div className="projects--gallery--pagination">
+        {/* <div className="projects--gallery--pagination">
           <div className="projects--gallery--pagination--item">01</div>
           <div className="projects--gallery--pagination--item">02</div>
           <div className="projects--gallery--pagination--item">03</div>
           <div className="projects--gallery--pagination--item">
             <img src="src/pages/Projects/images/arrow.svg" />
           </div>
-        </div>
+        </div> */}
       </div>
     </>
   );
