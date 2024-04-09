@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
 import Button from "../../components/Button/Button";
+import Counter from "../../components/Counter/Counter";
 import NewsCard from "../../components/NewsCard/NewsCard";
 import PartnersSlider from "../../components/PartnersSlider/PartnersSlider";
 import PeopleThinkCard from "../../components/PeopleThinkCard/PeopleThinkCard";
@@ -166,24 +167,24 @@ const Home = () => {
       </div>
       <div className="home--statistics--container">
         <div className="home--statistics-item--container">
-          <h4>12</h4>
+          <Counter targetValue={12} />
           <br />
 
           <p>Years of experience</p>
         </div>
         <div className="home--statistics-item--container">
-          <h4>1074</h4>
+          <Counter targetValue={1074} />
           <br />
           <p>Successful projects</p>
         </div>
         <div className="home--statistics-item--container">
-          <h4>98</h4>
+          <Counter targetValue={98} />
           <br />
 
           <p>Active projects</p>
         </div>
         <div className="home--statistics-item--container">
-          <h4>583</h4>
+          <Counter targetValue={583} />
           <br />
 
           <p>Happy customers</p>

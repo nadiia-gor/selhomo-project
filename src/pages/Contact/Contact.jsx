@@ -13,7 +13,7 @@ const validationSchema = Yup.object().shape({
     .min(2, "Too Short!")
     .max(50, "Too Long!")
     .required("Required")
-    .matches(/^[a-zA-Zа-яА-ЯёЁіІїЇґҐ ]+$/, "Name must not contain numbers."),
+    .matches(/^[^0-9]*$/, "Name must not contain numbers."),
   email: Yup.string().email("Invalid email").required("Required"),
   subject: Yup.string().required("Required"),
   phone: Yup.string()
