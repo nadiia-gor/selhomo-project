@@ -12,7 +12,7 @@ const ProjectCard = ({ projectPhoto }) => {
         </div>
         <Link to="/projects" onClick={() => window.scrollTo(0, 0)}>
           <button type="button" className="project-arrow-btn">
-            <img src="images/arrow.svg" alt="arrow-icon" />
+            <img src="images/home/arrow.svg" alt="arrow-icon" />
           </button>
         </Link>
       </div>

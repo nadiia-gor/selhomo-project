@@ -1,16 +1,16 @@
-import { Link } from 'react-router-dom';
-import './ReadMoreCard.scss';
+import { Link } from "react-router-dom";
+import "./ReadMoreCard.scss";
 
 const ReadMoreCard = ({ headerText, bodyText, className }) => {
   return (
     <div className={`readMoreCard--container ${className}`}>
       <h4
         className="readMoreCard--header"
-        style={{ textAlign: 'center', marginTop: 0 }}
+        style={{ textAlign: "center", marginTop: 0 }}
       >
         {headerText}
       </h4>
-      <p className="readMoreCard--body" style={{ textAlign: 'center' }}>
+      <p className="readMoreCard--body" style={{ textAlign: "center" }}>
         {bodyText}
       </p>
       <span className="readMoreCard--button-wrapper">
@@ -19,7 +19,7 @@ const ReadMoreCard = ({ headerText, bodyText, className }) => {
         </Link>
         <img
           className="readMoreCard--button--arrow"
-          src="src\assets\images\icons\arrow-right.svg"
+          src="images/icons/arrow-right.svg"
         />
       </span>
     </div>
