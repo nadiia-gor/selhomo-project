@@ -1,5 +1,5 @@
-import { Link } from 'react-router-dom';
-import './ProjectCard.scss';
+import { Link } from "react-router-dom";
+import "./ProjectCard.scss";
 
 const ProjectCard = ({ projectPhoto }) => {
   return (
@@ -12,7 +12,7 @@ const ProjectCard = ({ projectPhoto }) => {
         </div>
         <Link to="/projects" onClick={() => window.scrollTo(0, 0)}>
           <button type="button" className="project-arrow-btn">
-            <img src="src/pages/Home/images/arrow.svg" alt="arrow-icon" />
+            <img src="images/arrow.svg" alt="arrow-icon" />
           </button>
         </Link>
       </div>

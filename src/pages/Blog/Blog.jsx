@@ -1,33 +1,33 @@
-import NewsCard from '../../components/NewsCard/NewsCard';
-import TitleBanner from '../../components/TitleBanner/TitleBanner';
-import './Blog.scss';
+import NewsCard from "../../components/NewsCard/NewsCard";
+import TitleBanner from "../../components/TitleBanner/TitleBanner";
+import "./Blog.scss";
 
 const cardText = {
   header: "Let's get a solution for building construction work",
-  date: '26 December 2022',
+  date: "26 December 2022",
 };
 const cardContent = [
-  { image: 'src/pages/Blog/images/news1.png' },
-  { image: 'src/pages/Blog/images/news2.png' },
-  { image: 'src/pages/Blog/images/news3.png' },
+  { image: "images/blog/news1.png" },
+  { image: "images/blog/news2.png" },
+  { image: "images/blog/news3.png" },
 ];
 
 const Blog = () => {
   return (
     <>
       <TitleBanner
-        titleText={'Articles & News'}
-        backgroundImage={'src/pages/Blog/images/titlebanner.png'}
+        titleText={"Articles & News"}
+        backgroundImage={"images/blog/titlebanner.png"}
       />
       <div className="blog">
         <div className="blog--search">
           <input type="text" name="" id="" placeholder="Search" />
-          <img src="src/pages/Blog/images/search.svg" alt="" />
+          <img src="images/blog/search.svg" alt="" />
         </div>
         <div className="blog--latest">
           <h2>Latest Post</h2>
           <div className="blog--latest--card">
-            <img src="src/pages/Blog/images/latest.png" alt="" />
+            <img src="images/blog/latest.png" alt="" />
             <div className="blog--latest--card--text">
               <h4>Low Cost Latest Invented Interior Designing Ideas</h4>
               <p>

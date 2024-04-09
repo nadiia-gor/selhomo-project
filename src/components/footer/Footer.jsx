@@ -1,6 +1,6 @@
-import { Link } from 'react-router-dom';
-import Logo from '../Logo/Logo';
-import './Footer.scss';
+import { Link } from "react-router-dom";
+import Logo from "../Logo/Logo";
+import "./Footer.scss";
 
 const Footer = () => {
   return (
@@ -16,19 +16,16 @@ const Footer = () => {
           </p>
           <div className="footer--social-media">
             <a href="https://facebook.com">
-              <img src="src/assets/images/icons/facebook.svg" alt="facebook" />
+              <img src="images/icons/facebook.svg" alt="facebook" />
             </a>
             <a href="https://twitter.com">
-              <img src="src/assets/images/icons/twitter.svg" alt="twitter" />
+              <img src="images/icons/twitter.svg" alt="twitter" />
             </a>
             <a href="https://linkedin.com">
-              <img src="src/assets/images/icons/linkedin.svg" alt="linkedin" />
+              <img src="images/icons/linkedin.svg" alt="linkedin" />
             </a>
             <a href="https://instagram.com">
-              <img
-                src="src/assets/images/icons/instagram.svg"
-                alt="instagram"
-              />
+              <img src="images/icons/instagram.svg" alt="instagram" />
             </a>
           </div>
         </div>

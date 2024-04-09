@@ -1,55 +1,55 @@
-import { ErrorMessage, Field, Form, Formik } from 'formik';
-import * as Yup from 'yup';
-import BigImageCard from '../../components/BigImageCard/BigImageCard';
-import Button from '../../components/Button/Button';
-import PeopleThinkCard from '../../components/PeopleThinkCard/PeopleThinkCard';
-import TitleBanner from '../../components/TitleBanner/TitleBanner';
-import './AboutUs.scss';
+import { ErrorMessage, Field, Form, Formik } from "formik";
+import * as Yup from "yup";
+import BigImageCard from "../../components/BigImageCard/BigImageCard";
+import Button from "../../components/Button/Button";
+import PeopleThinkCard from "../../components/PeopleThinkCard/PeopleThinkCard";
+import TitleBanner from "../../components/TitleBanner/TitleBanner";
+import "./AboutUs.scss";
 
 const validationSchema = Yup.object().shape({
   name: Yup.string()
-    .min(2, 'Too Short!')
-    .max(50, 'Too Long!')
-    .required('Required')
-    .matches(/^[a-zA-Zа-яА-ЯёЁіІїЇґҐ ]+$/, 'Name must not contain numbers.'),
-  email: Yup.string().email('Invalid email').required('Required'),
-  message: Yup.string().required('Required'),
+    .min(2, "Too Short!")
+    .max(50, "Too Long!")
+    .required("Required")
+    .matches(/^[a-zA-Zа-яА-ЯёЁіІїЇґҐ ]+$/, "Name must not contain numbers."),
+  email: Yup.string().email("Invalid email").required("Required"),
+  message: Yup.string().required("Required"),
 });
 
 const peopleThinkCardContents = [
   {
-    avatar: 'src/pages/Home/images/person1.png',
-    personName: 'Natasha',
-    description: 'Kyiv, Ukraine',
-    info: 'Lorem Ipsum is simply dummy text of the typesetting industry. Ipsum has been.',
+    avatar: "images/home/person1.png",
+    personName: "Natasha",
+    description: "Kyiv, Ukraine",
+    info: "Lorem Ipsum is simply dummy text of the typesetting industry. Ipsum has been.",
   },
   {
-    avatar: 'src/pages/Home/images/person2.jpg',
-    personName: 'Raymond Galario',
-    description: 'UK, London',
-    info: 'Lorem Ipsum is simply dummy text of the typesetting industry. Ipsum has been scrambled it to make a type book.',
+    avatar: "images/home/person2.jpg",
+    personName: "Raymond Galario",
+    description: "UK, London",
+    info: "Lorem Ipsum is simply dummy text of the typesetting industry. Ipsum has been scrambled it to make a type book.",
   },
   {
-    avatar: 'src/pages/Home/images/person3.jpg',
-    personName: 'Benny Roll',
-    description: 'USA, New York',
-    info: 'Lorem Ipsum is simply dummy text of the typesetting industry. Ipsum has been scrambled.',
+    avatar: "images/home/person3.jpg",
+    personName: "Benny Roll",
+    description: "USA, New York",
+    info: "Lorem Ipsum is simply dummy text of the typesetting industry. Ipsum has been scrambled.",
   },
 ];
 
 const wwdContents = [
   {
-    header: 'What We Do',
-    desc: 'It is a long established fact that a reader will be distracted by the of readable content of a page when lookings at its layouts the points of using that it has a more-or-less normal.',
-    buttonText: 'Our Concept',
-    image: 'src/pages/AboutUs/images/wwd-img.png',
+    header: "What We Do",
+    desc: "It is a long established fact that a reader will be distracted by the of readable content of a page when lookings at its layouts the points of using that it has a more-or-less normal.",
+    buttonText: "Our Concept",
+    image: "images/about_us/wwd-img.png",
   },
   {
-    header: 'The End Result',
-    desc: 'It is a long established fact that a reader will be distracted by the of readable content of a page when lookings at its layouts the points of using that it has a more-or-less normal.',
-    buttonText: 'Our Portfolio',
-    image: 'src/pages/AboutUs/images/endresult-img.png',
-    direction: 'rtl',
+    header: "The End Result",
+    desc: "It is a long established fact that a reader will be distracted by the of readable content of a page when lookings at its layouts the points of using that it has a more-or-less normal.",
+    buttonText: "Our Portfolio",
+    image: "images/about_us/endresult-img.png",
+    direction: "rtl",
   },
 ];
 
@@ -57,8 +57,8 @@ const AboutUs = () => {
   return (
     <>
       <TitleBanner
-        titleText={'About us'}
-        backgroundImage={'src/pages/AboutUs/images/contact-banner-bg.png'}
+        titleText={"About us"}
+        backgroundImage={"images/about_us/contact-banner-bg.png"}
       />
       <div className="aboutus--container">
         <div className="aboutus--wwd" />
@@ -100,9 +100,9 @@ const AboutUs = () => {
           <div className="aboutus--contactform--form">
             <Formik
               initialValues={{
-                name: '',
-                email: '',
-                message: '',
+                name: "",
+                email: "",
+                message: "",
               }}
               validationSchema={validationSchema}
               onSubmit={(values) => {
@@ -131,12 +131,12 @@ const AboutUs = () => {
                   </div>
                 </div>
                 <Button
-                  buttonText={'Send now'}
-                  buttonColor={'#292F36'}
+                  buttonText={"Send now"}
+                  buttonColor={"#292F36"}
                   style={{
-                    marginTop: '30px',
-                    marginLeft: 'auto',
-                    marginRight: 'auto',
+                    marginTop: "30px",
+                    marginLeft: "auto",
+                    marginRight: "auto",
                   }}
                 />
               </Form>

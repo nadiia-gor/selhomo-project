@@ -1,85 +1,85 @@
-import { Link } from 'react-router-dom';
-import Button from '../../components/Button/Button';
-import NewsCard from '../../components/NewsCard/NewsCard';
-import PartnersSlider from '../../components/PartnersSlider/PartnersSlider';
-import PeopleThinkCard from '../../components/PeopleThinkCard/PeopleThinkCard';
-import ProjectCard from '../../components/ProjectCard/ProjectCard';
-import ReadMoreCard from '../../components/ReadMoreCard/ReadMoreCard';
-import WannaJoinBanner from '../../components/WannaJoinBanner/WannaJoinBanner';
-import './Home.scss';
+import { Link } from "react-router-dom";
+import Button from "../../components/Button/Button";
+import NewsCard from "../../components/NewsCard/NewsCard";
+import PartnersSlider from "../../components/PartnersSlider/PartnersSlider";
+import PeopleThinkCard from "../../components/PeopleThinkCard/PeopleThinkCard";
+import ProjectCard from "../../components/ProjectCard/ProjectCard";
+import ReadMoreCard from "../../components/ReadMoreCard/ReadMoreCard";
+import WannaJoinBanner from "../../components/WannaJoinBanner/WannaJoinBanner";
+import "./Home.scss";
 
 const readMoreCardContents = [
   {
-    headerText: 'Project Plan',
+    headerText: "Project Plan",
     bodyText:
-      'There are many variations of the passages of lorem Ipsum from available majority.',
+      "There are many variations of the passages of lorem Ipsum from available majority.",
   },
   {
-    headerText: 'Interior Work',
+    headerText: "Interior Work",
     bodyText:
-      'There are many variations of the passages of lorem Ipsum from available majority.',
+      "There are many variations of the passages of lorem Ipsum from available majority.",
   },
   {
-    headerText: 'Realization',
+    headerText: "Realization",
     bodyText:
-      'There are many variations of the passages of lorem Ipsum from available majority.',
+      "There are many variations of the passages of lorem Ipsum from available majority.",
   },
 ];
 
 const peopleThinkCardContents = [
   {
-    avatar: 'src/pages/Home/images/person1.png',
-    personName: 'Natasha',
-    description: 'Kyiv, Ukraine',
-    info: 'Lorem Ipsum is simply dummy text of the typesetting industry. Ipsum has been.',
+    avatar: "images/home/person1.png",
+    personName: "Natasha",
+    description: "Kyiv, Ukraine",
+    info: "Lorem Ipsum is simply dummy text of the typesetting industry. Ipsum has been.",
   },
   {
-    avatar: 'src/pages/Home/images/person2.jpg',
-    personName: 'Raymond Galario',
-    description: 'UK, London',
-    info: 'Lorem Ipsum is simply dummy text of the typesetting industry. Ipsum has been scrambled it to make a type book.',
+    avatar: "images/home/person2.jpg",
+    personName: "Raymond Galario",
+    description: "UK, London",
+    info: "Lorem Ipsum is simply dummy text of the typesetting industry. Ipsum has been scrambled it to make a type book.",
   },
   {
-    avatar: 'src/pages/Home/images/person3.jpg',
-    personName: 'Benny Roll',
-    description: 'USA, New York',
-    info: 'Lorem Ipsum is simply dummy text of the typesetting industry. Ipsum has been scrambled.',
+    avatar: "images/home/person3.jpg",
+    personName: "Benny Roll",
+    description: "USA, New York",
+    info: "Lorem Ipsum is simply dummy text of the typesetting industry. Ipsum has been scrambled.",
   },
 ];
 
 const newsCardContents = [
   {
-    newsPhoto: 'src/pages/Home/images/news-photo1.png',
-    newsCategory: 'Kitchen Design',
-    newsTitle: 'Let’s Get Solution For Building Construction Work',
-    newsDate: '26 December, 2022',
+    newsPhoto: "images/home/news-photo1.png",
+    newsCategory: "Kitchen Design",
+    newsTitle: "Let’s Get Solution For Building Construction Work",
+    newsDate: "26 December, 2022",
   },
   {
-    newsPhoto: 'src/pages/Home/images/news-photo2.png',
-    newsCategory: 'Living Design',
-    newsTitle: 'Low Cost Latest Invented Interior Designing Ideas',
-    newsDate: '22 November, 2023',
+    newsPhoto: "images/home/news-photo2.png",
+    newsCategory: "Living Design",
+    newsTitle: "Low Cost Latest Invented Interior Designing Ideas",
+    newsDate: "22 November, 2023",
   },
   {
-    newsPhoto: 'src/pages/Home/images/news-photo3.png',
-    newsCategory: 'Interior Design',
-    newsTitle: 'Best For Any Office & Business Interior Solution',
-    newsDate: '4 December, 2023',
+    newsPhoto: "images/home/news-photo3.png",
+    newsCategory: "Interior Design",
+    newsTitle: "Best For Any Office & Business Interior Solution",
+    newsDate: "4 December, 2023",
   },
 ];
 
 const projectCardContents = [
   {
-    projectPhoto: 'src/pages/Home/images/project-photos/project1.png',
+    projectPhoto: "images/home/project-photos/project1.png",
   },
   {
-    projectPhoto: 'src/pages/Home/images/project-photos/project2.png',
+    projectPhoto: "images/home/project-photos/project2.png",
   },
   {
-    projectPhoto: 'src/pages/Home/images/project-photos/project3.png',
+    projectPhoto: "images/home/project-photos/project3.png",
   },
   {
-    projectPhoto: 'src/pages/Home/images/project-photos/project4.png',
+    projectPhoto: "images/home/project-photos/project4.png",
   },
 ];
 
@@ -95,8 +95,8 @@ const Home = () => {
           </p>
           <Link to="/contact" onClick={() => window.scrollTo(0, 0)}>
             <Button
-              buttonText={'Get started'}
-              arrow={'white'}
+              buttonText={"Get started"}
+              arrow={"white"}
               scrollToTop={true}
             />
           </Link>
@@ -119,7 +119,7 @@ const Home = () => {
             available, majority.
           </p>
           <div className="home--call-info--container">
-            <img src="src/pages/Home/images/call-icon.svg" alt="call-icon" />
+            <img src="images/home/call-icon.svg" alt="call-icon" />
             <div className="home--phone-number">
               <p>012345678</p>
               <p>Call Us Anytime</p>
@@ -127,9 +127,9 @@ const Home = () => {
           </div>
           <Link to="/contact" onClick={() => window.scrollTo(0, 0)}>
             <Button
-              buttonText={'Get Free Estimate'}
-              arrow={'white'}
-              buttonPadding={'26px 31px'}
+              buttonText={"Get Free Estimate"}
+              arrow={"white"}
+              buttonPadding={"26px 31px"}
             />
           </Link>
         </div>
@@ -148,21 +148,6 @@ const Home = () => {
           ))}
         </div>
       </div>
-      {/* <div className="home-partners--container">
-        <img
-          src="src/pages/Home/images/brand-icons/buffer.svg"
-          alt="buffer-partner"
-        />
-        <img
-          src="src/pages/Home/images/brand-icons/bigcommerce.svg"
-          alt="bigcommerce-partner"
-        />
-        <img
-          src="src/pages/Home/images/brand-icons/cion.svg"
-          alt="cion-partner"
-        />
-        <img src="src/pages/Home/images/brand-icons/frame.svg" alt="partner" />
-      </div> */}
       <PartnersSlider />
       <div className="home--follow-our-projects--container">
         <h3>Follow Our Projects</h3>

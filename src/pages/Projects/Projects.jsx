@@ -1,30 +1,30 @@
-import BigImageProjectCard from '../../components/BigImageProjectCard/BigImageProjectCard';
-import TitleBanner from '../../components/TitleBanner/TitleBanner';
-import './Projects.scss';
+import BigImageProjectCard from "../../components/BigImageProjectCard/BigImageProjectCard";
+import TitleBanner from "../../components/TitleBanner/TitleBanner";
+import "./Projects.scss";
 
 const galleryItemText = {
-  header: 'Minimal Bedroom',
-  desc: 'Decor / Architecture',
+  header: "Minimal Bedroom",
+  desc: "Decor / Architecture",
 };
 
 const galleryItems = [
   {
-    image: 'src/pages/Projects/images/gallery1.png',
+    image: "images/projects/gallery1.png",
   },
   {
-    image: 'src/pages/Projects/images/gallery2.png',
+    image: "images/projects/gallery2.png",
   },
   {
-    image: 'src/pages/Projects/images/gallery3.png',
+    image: "images/projects/gallery3.png",
   },
   {
-    image: 'src/pages/Projects/images/gallery4.png',
+    image: "images/projects/gallery4.png",
   },
   {
-    image: 'src/pages/Projects/images/gallery5.png',
+    image: "images/projects/gallery5.png",
   },
   {
-    image: 'src/pages/Projects/images/gallery6.png',
+    image: "images/projects/gallery6.png",
   },
 ];
 
@@ -32,8 +32,8 @@ const Projects = () => {
   return (
     <>
       <TitleBanner
-        titleText={'Our projects'}
-        backgroundImage={'src/pages/Projects/images/titlebanner.png'}
+        titleText={"Our projects"}
+        backgroundImage={"images/projects/titlebanner.png"}
       />
       <div className="projects--gallery">
         <div className="projects--gallery--button projects--gallery--button--active">
@@ -49,14 +49,6 @@ const Projects = () => {
             />
           ))}
         </div>
-        {/* <div className="projects--gallery--pagination">
-          <div className="projects--gallery--pagination--item">01</div>
-          <div className="projects--gallery--pagination--item">02</div>
-          <div className="projects--gallery--pagination--item">03</div>
-          <div className="projects--gallery--pagination--item">
-            <img src="src/pages/Projects/images/arrow.svg" />
-          </div>
-        </div> */}
       </div>
     </>
   );

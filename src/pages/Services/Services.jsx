@@ -1,59 +1,59 @@
-import LeafCard from '../../components/LeafCard/LeafCard';
-import ReadMoreCard from '../../components/ReadMoreCard/ReadMoreCard';
-import TitleBanner from '../../components/TitleBanner/TitleBanner';
-import WannaJoinBanner from '../../components/WannaJoinBanner/WannaJoinBanner';
-import './Services.scss';
+import LeafCard from "../../components/LeafCard/LeafCard";
+import ReadMoreCard from "../../components/ReadMoreCard/ReadMoreCard";
+import TitleBanner from "../../components/TitleBanner/TitleBanner";
+import WannaJoinBanner from "../../components/WannaJoinBanner/WannaJoinBanner";
+import "./Services.scss";
 
 const loremIpsum =
-  'It is a long established fact will be distracted Lorem Ipsum is simply dummy from text of the typesetting industry.';
+  "It is a long established fact will be distracted Lorem Ipsum is simply dummy from text of the typesetting industry.";
 
 const readMoreContents = [
   {
-    headerText: 'Project Plan',
+    headerText: "Project Plan",
   },
   {
-    headerText: 'Interior Work',
+    headerText: "Interior Work",
   },
   {
-    headerText: 'Retail Design',
+    headerText: "Retail Design",
   },
   {
-    headerText: '2d/3d Art Work',
+    headerText: "2d/3d Art Work",
   },
   {
-    headerText: 'Exterior Work',
+    headerText: "Exterior Work",
   },
   {
-    headerText: 'Decoration Work',
+    headerText: "Decoration Work",
   },
 ];
 
 const leafCardContents = [
   {
-    image: 'src/pages/Services/images/leaf1.png',
-    number: '01',
-    header: 'Concept & Details',
+    image: "images/services/leaf1.png",
+    number: "01",
+    header: "Concept & Details",
     desc: loremIpsum,
     rtl: false,
   },
   {
-    image: 'src/pages/Services/images/leaf2.png',
-    number: '02',
-    header: 'Idea for Work',
+    image: "images/services/leaf2.png",
+    number: "02",
+    header: "Idea for Work",
     desc: loremIpsum,
     rtl: true,
   },
   {
-    image: 'src/pages/Services/images/leaf3.png',
-    number: '03',
-    header: 'Design',
+    image: "images/services/leaf3.png",
+    number: "03",
+    header: "Design",
     desc: loremIpsum,
     rtl: false,
   },
   {
-    image: 'src/pages/Services/images/leaf4.png',
-    number: '04',
-    header: 'Perfection',
+    image: "images/services/leaf4.png",
+    number: "04",
+    header: "Perfection",
     desc: loremIpsum,
     rtl: true,
   },
@@ -63,8 +63,8 @@ const Services = () => {
   return (
     <>
       <TitleBanner
-        titleText={'Services'}
-        backgroundImage={'src/pages/Services/images/banner.png'}
+        titleText={"Services"}
+        backgroundImage={"images/services/banner.png"}
       />
       <div className="services--container">
         <div className="services--read-more-block">

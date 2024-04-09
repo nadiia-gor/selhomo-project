@@ -1,4 +1,4 @@
-import './NewsCard.scss';
+import "./NewsCard.scss";
 
 const NewsCard = ({ newsPhoto, newsTitle, newsDate, newsCategory }) => {
   return (
@@ -9,7 +9,7 @@ const NewsCard = ({ newsPhoto, newsTitle, newsDate, newsCategory }) => {
       <div className="date-arrow--container">
         <p>{newsDate}</p>
         <button type="button">
-          <img src="src/pages/Home/images/arrow.svg" alt="arrow" />
+          <img src="images/arrow.svg" alt="arrow" />
         </button>
       </div>
     </div>

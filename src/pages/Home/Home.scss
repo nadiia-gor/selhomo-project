@@ -1,4 +1,4 @@
-@import 'src/assets/styles/FontRoots.scss';
+@import "src/assets/styles/FontRoots.scss";
 
 .home--container {
   width: min(80vw, 1210px);
@@ -8,7 +8,7 @@
   }
 
   .home--title-banner-container {
-    background-image: url('./images/title-banner-bg.jpg');
+    background-image: url("images/home/title-banner-bg.jpg");
     background-size: cover;
     background-position-y: center;
     height: 758px;
@@ -26,14 +26,14 @@
       }
 
       h1 {
-        font-family: 'DM Serif Display';
+        font-family: "DM Serif Display";
         font-size: 60px;
         font-weight: 400;
         line-height: 81.25px;
       }
 
       p {
-        font-family: 'Inter Variable';
+        font-family: "Inter Variable";
         font-size: 22px;
         font-weight: 500;
         line-height: 150%;
@@ -59,7 +59,7 @@
     padding-top: 142px;
     margin-top: 150px;
     margin-bottom: 190px;
-    background-image: url('src/pages/Home/images/we-create-art.png');
+    background-image: url("images/home/we-create-art.png");
     background-repeat: no-repeat;
     background-size: cover;
     height: 700px;
@@ -125,7 +125,7 @@
     h3 {
       color: #fff;
       text-align: center;
-      font-family: 'DM Serif Display';
+      font-family: "DM Serif Display";
       font-size: 50px;
       font-weight: 400;
       line-height: 62.5px;
@@ -169,7 +169,7 @@
     }
     h3 {
       margin-top: 200px;
-      font-family: 'DM Serif Display';
+      font-family: "DM Serif Display";
       font-size: 60px;
       font-weight: 400;
       line-height: 75px;
