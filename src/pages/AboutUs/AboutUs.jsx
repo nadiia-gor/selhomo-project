@@ -1,4 +1,6 @@
 import { ErrorMessage, Field, Form, Formik } from "formik";
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 import * as Yup from "yup";
 import BigImageCard from "../../components/BigImageCard/BigImageCard";
 import Button from "../../components/Button/Button";
@@ -11,7 +13,7 @@ const validationSchema = Yup.object().shape({
     .min(2, "Too Short!")
     .max(50, "Too Long!")
     .required("Required")
-    .matches(/^[a-zA-Zа-яА-ЯёЁіІїЇґҐ ]+$/, "Name must not contain numbers."),
+    .matches(/^[^0-9]*$/, "Name must not contain numbers."),
   email: Yup.string().email("Invalid email").required("Required"),
   message: Yup.string().required("Required"),
 });
@@ -60,6 +62,7 @@ const AboutUs = () => {
         titleText={"About us"}
         backgroundImage={"images/about_us/contact-banner-bg.png"}
       />
+      <ToastContainer />
       <div className="aboutus--container">
         <div className="aboutus--wwd" />
         <div className="aboutus--quote">
@@ -105,8 +108,12 @@ const AboutUs = () => {
                 message: "",
               }}
               validationSchema={validationSchema}
-              onSubmit={(values) => {
+              onSubmit={(values, actions) => {
                 console.log(values);
+                toast.success(
+                  "Thank you for contacting us, we'll get back to you!"
+                );
+                actions.resetForm();
               }}
             >
               <Form>
@@ -133,6 +140,7 @@ const AboutUs = () => {
                 <Button
                   buttonText={"Send now"}
                   buttonColor={"#292F36"}
+                  isSubmitType={true}
                   style={{
                     marginTop: "30px",
                     marginLeft: "auto",
