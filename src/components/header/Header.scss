@@ -5,7 +5,7 @@ header {
   transform: translateX(-50%);
   background: #fff;
   width: 100%;
-  // needed because of leaflet
+  // needed because of leaflet.
   z-index: 1001;
 }
 
@@ -44,7 +44,7 @@ header {
         // other links, so let's just style the <a> component
         a {
           color: #292f36;
-          font-family: 'Jost Variable';
+          font-family: "Jost Variable";
           font-size: 20px;
           font-style: normal;
           font-weight: 500;
